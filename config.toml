@@ -1,4 +1,4 @@
-baseURL = "https://viluoicode.github.io/fcj-workshop/"
+baseURL = "https://huynhhao080.github.io/aws-internship-worklog/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
@@ -17,7 +17,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "huynhhao080@gmail.com"
+  author = "HuynhHao080"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false

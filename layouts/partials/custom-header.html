@@ -1,0 +1,20 @@
+<style>
+  /* Wide cost/evidence tables scroll within the article on small screens. */
+  #body-inner table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #body-inner p, #body-inner li {
+    overflow-wrap: anywhere;
+  }
+  #body-inner pre {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  @media (max-width: 48rem) {
+    /* The theme's floated hover icon extends long headings past the viewport. */
+    #body-inner .anchor { display: none; }
+  }
+</style>

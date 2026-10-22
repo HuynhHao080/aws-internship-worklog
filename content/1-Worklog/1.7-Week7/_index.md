@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
+> **Evidence review 2026-10-21:** Dates/results below are pre-existing content, not confirmed by the student in this review. Documentation references do not prove completion or attendance. PLANNED/TODO is not converted to done. Attach dated artifacts, actual results and confirmation of the assessed 12-week period.
+
+
 ### Week 7 Objectives:
 
 * Understand the differences between relational and NoSQL databases.

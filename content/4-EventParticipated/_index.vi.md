@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
+> **Cần sinh viên xác nhận:** Thông tin cá nhân, thời gian, xếp loại, trải nghiệm mentor/phúc lợi và nội dung sự kiện có sẵn chưa được xác minh. Không coi văn bản mẫu hoặc ảnh có sẵn là minh chứng đủ 10 buổi office/3 sự kiện có check-in rõ mặt. Xem mục Audit để bổ sung dữ liệu thật.
+
+
 > Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
 > 
 > Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
@@ -20,7 +23,7 @@ pre: " <b> 4. </b> "
 
 Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
 
-### [Event 1](4.1-Event1/)
+### [Event 1](4.1-event1/)
 &emsp;**Tên sự kiện:** Prove It: Agentic Cloud Investigation Series
 
 &emsp;**Thời gian:** 09:00–12:00 ngày 05, 12 và 19/09/2026
@@ -31,7 +34,7 @@ Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là
 
 
 
-### [Event 2](4.2-Event2/)
+### [Event 2](4.2-event2/)
 &emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
 
 &emsp;**Thời gian:** 09:00 ngày 13/08/2025

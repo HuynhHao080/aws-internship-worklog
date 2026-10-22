@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
+> **Đối soát minh chứng 21/10/2026:** Các dòng ngày/kết quả bên dưới là nội dung có sẵn, chưa được sinh viên xác nhận trong phiên rà soát này. Link tài liệu tham khảo không chứng minh đã thực hiện hoặc có mặt. Không tự chuyển PLANNED/TODO thành hoàn thành. Cần bổ sung artifact theo ngày, kết quả thật và xác nhận mốc 12 tuần.
+
+
 ### Mục tiêu tuần 10:
 
 * Hiểu giao tiếp đồng bộ và bất đồng bộ.

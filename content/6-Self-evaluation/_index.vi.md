@@ -6,6 +6,12 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
+> **Cần sinh viên xác nhận:** Thông tin cá nhân, thời gian, xếp loại, trải nghiệm mentor/phúc lợi và nội dung sự kiện có sẵn chưa được xác minh. Không coi văn bản mẫu hoặc ảnh có sẵn là minh chứng đủ 10 buổi office/3 sự kiện có check-in rõ mặt. Xem mục Audit để bổ sung dữ liệu thật.
+
+
+> Bản nháp cần sinh viên xác nhận: hoàn thiện các chỗ trống và xác nhận điểm đánh giá theo trải nghiệm thực tế trước khi nộp.
+
+
 Trong suốt thời gian thực tập tại **[Tên công ty/tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
 Tôi đã tham gia **[mô tả ngắn gọn dự án hoặc công việc chính]**, qua đó cải thiện kỹ năng **[liệt kê kỹ năng: lập trình, phân tích, viết báo cáo, giao tiếp…]**.  
 
@@ -34,3 +40,7 @@ Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân t
 * Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
 * Cải thiện trong cách tư duy giải quyết vấn đề
 * Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+
+## Cơ sở tự đánh giá kỹ thuật cần sinh viên tự giải thích
+
+Artifact thực tế gồm kiểm ownership, version S3, partial batch SQS, validation/log an toàn, test nhiều lớp và dự toán AWS có nguồn. Hãy tự chạy demo và giải thích mỗi lỗi trước/sau, test nào chứng minh, giới hạn mock/AWS. Không mặc định nội dung do trợ lý sửa là kỹ năng sinh viên đã thành thạo. Bổ sung đóng góp do chính mình làm và nguồn xác nhận; xếp loại chuyên cần/thái độ không suy ra từ số test.

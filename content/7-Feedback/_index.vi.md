@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
+> **Cần sinh viên xác nhận:** Thông tin cá nhân, thời gian, xếp loại, trải nghiệm mentor/phúc lợi và nội dung sự kiện có sẵn chưa được xác minh. Không coi văn bản mẫu hoặc ảnh có sẵn là minh chứng đủ 10 buổi office/3 sự kiện có check-in rõ mặt. Xem mục Audit để bổ sung dữ liệu thật.
+
+
 >Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
 
 ### Đánh giá chung
@@ -39,3 +42,7 @@ Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về t
 - Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
 - Bạn có muốn tiếp tục chương trình này trong tương lai?
 - Góp ý khác (tự do chia sẻ):
+
+## Khung chia sẻ dựa trên project, cần điền trải nghiệm thật
+
+Có thể trình bày: (1) lỗi thực tế bạn tự tái hiện; (2) điều học được về identity/ownership và retry; (3) phần hướng dẫn mentor nào thật sự đã nhận kèm ngày/reference; (4) khó khăn và đề xuất cải thiện cụ thể; (5) việc bạn sẽ tự làm tiếp theo. Chưa gửi góp ý cho ai. Không sử dụng lời kể mẫu về phúc lợi/mentor nếu không đúng trải nghiệm của bạn.

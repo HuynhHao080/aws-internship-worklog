@@ -6,6 +6,15 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
+## Main workshop: Policy Assistant
+
+Start with **5.7 Policy Assistant** below: local/deployment/testing/monitoring/cleanup, student architecture and COST. Source is locally checked; AWS acceptance is pending. Chapters 5.1–5.6 are a separate S3/VPC learning lab, not the application architecture.
+
+
+
+> This is an independent S3/VPC Endpoint workshop, not the Policy Assistant deployment guide or proof that the application uses VPC Endpoints.
+
+
 # Secure Hybrid Access to S3 using VPC Endpoints
 
 #### Overview
@@ -21,8 +30,8 @@ You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoi
 #### Content
 
 1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+2. [Prerequiste](5.2-prerequiste/)
+3. [Access S3 from VPC](5.3-s3-vpc/)
+4. [Access S3 from On-premises](5.4-s3-onprem/)
+5. [VPC Endpoint Policies (Bonus)](5.5-policy/)
+6. [Clean up](5.6-cleanup/)

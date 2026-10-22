@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
+> **Student confirmation required:** Existing personal data, dates, ratings, mentor/benefit experiences and event claims are unverified. Template text or existing images do not establish 10 office sessions/3 events with identifiable face check-ins. Complete the Audit evidence ledger using real records.
+
+
 > Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
 
 ### Overall Evaluation
@@ -41,3 +44,8 @@ The company provides an internship allowance and offers flexible working hours w
 - Do you have any suggestions to improve the internship experience?  
 - Would you like to continue this program in the future?  
 - Any other comments (free sharing):
+
+
+## Project-grounded sharing prompts, real experience required
+
+Describe a failure you personally reproduced, lessons about identity/ownership and retries, mentor guidance you actually received with date/reference, concrete difficulties/suggestions and your next independent task. No feedback has been sent to anyone. Do not reuse template benefits/mentor claims unless they match your experience.

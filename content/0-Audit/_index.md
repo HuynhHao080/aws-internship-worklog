@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 0. </b> "
 ---
 
+> Historical snapshot, 2026-10-16. Statements below about missing S3/Cognito/frontend/CI are no longer current. See the Policy Assistant section for the 2026-10-21 reconciliation. This historical audit does not establish current AWS deployment.
+
+
 # Policy Assistant — Evidence Reconciliation Audit
 
 This document reconciles the 25-week internship Worklog against the actual contents of the `policy-assistant` repository. It is an **audit-only** document: no files were modified, deployed, committed, or pushed during this review.

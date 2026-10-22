@@ -5,6 +5,9 @@ weight: 1
 chapter: false
 ---
 
+> **Student confirmation required:** Existing personal data, dates, ratings, mentor/benefit experiences and event claims are unverified. Template text or existing images do not establish 10 office sessions/3 events with identifiable face check-ins. Complete the Audit evidence ledger using real records.
+
+
     
 # Internship Report
 
@@ -13,7 +16,7 @@ chapter: false
 
 &emsp; **Phone Number:** <a href="tel:0326798878">0326798878</a>
 
-&emsp; **Email:** <a href="mailto:huynhhao080@gmail.com">huynhhao080@gmail.com</a>
+&emsp; **Email:** PENDING_OWNER_PUBLIC_CONTACT_APPROVAL
 
 &emsp; **University:** Dong Nai Technology University
 
@@ -27,14 +30,16 @@ chapter: false
 
 &emsp; **Internship Duration:** From 1/07/2026 to 31/12/2026
 
-![Your profile picture](/fcj-workshop/images/avatar.png)
+![Your profile picture](/aws-internship-worklog/images/avatar.png)
 
 ### Report Content
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+1.  [Worklog](1-worklog/)
+2.  [Proposal](2-proposal/)
+3.  [BlogsPosted](3-blogsposted/)
+4.  [Events Participated](4-eventparticipated/)
+5.  [Workshop](5-workshop/)
+6.  [Self-evaluation](6-self-evaluation/)
+7.  [Sharing and Feedback](7-feedback/)
+
+8. [Policy Assistant: status and evidence](8-policyassistant/)
