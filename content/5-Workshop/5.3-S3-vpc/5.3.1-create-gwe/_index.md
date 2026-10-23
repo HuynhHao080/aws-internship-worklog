@@ -1,40 +1,20 @@
 ---
-title : "Create a gateway endpoint"
+title: "Reference: Gateway endpoint configuration"
 date : 2024-01-01 
 weight : 1
 chapter : false
 pre : " <b> 5.3.1 </b> "
 ---
 
-1. Open the [Amazon VPC console](https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#Home:)
-2. In the navigation pane, choose **Endpoints**, then click **Create Endpoint**:
+> **FCAJ reference material — not the personal workshop or evidence of completed practice.** This page contains newly written concept notes linking to the source, rather than republishing its walkthrough or sample images.
 
-{{% notice note %}}
-You will see **6 existing VPC endpoints** that support **AWS Systems Manager (SSM)**. These endpoints were deployed automatically by the **CloudFormation Templates** for this workshop.
-{{% /notice %}}
+A gateway endpoint applies to selected route tables and uses an endpoint policy. When reviewing the source, distinguish routing, IAM authorization and bucket policy; an endpoint alone does not grant access to S3 data.
 
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/endpoints.png)
+## Source and scope
 
-3. In the Create endpoint console:
-+ Specify name of the endpoint: ```s3-gwe```
-+ In service category, choose **AWS services**
+- [Reference page in the FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/).
+- [Related AWS Study Group S3/VPC workshop](https://000111.awsstudygroup.com/).
+- Template images remain in the original local files but are excluded from this trial website output; reuse permission is unverified. Attribution does not substitute for permission.
+- The front matter date is historical template metadata, not a student practice date. No new AWS results are created or inferred here.
 
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/create-s3-gwe1.png)
-
-+ In **Services**, type ```s3``` in the search box and choose the service with type **gateway**
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/services.png)
-
-+ For VPC, select **VPC Cloud** from the drop-down.
-+ For **Configure route tables**, select the route table that is already associated with **two subnets** (note: this is not the main route table for the VPC, but a second route table created by CloudFormation).
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/vpc.png)
-
-+ **For Policy**, leave the default option, **Full Access**, to allow full access to the service. You will deploy **a VPC endpoint policy** in a later lab module to demonstrate restricting access to **S3 buckets** based on policies.
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/policy.png)
-
-+ Do not add a tag to the VPC endpoint at this time.
-+ Click **Create endpoint**, then click x after receiving a successful creation message.
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/complete.png)
+[Read the personal AWS Policy Assistant workshop](../../5.7-policyassistant/). Missing student-authored architecture and student evidence remain PENDING.

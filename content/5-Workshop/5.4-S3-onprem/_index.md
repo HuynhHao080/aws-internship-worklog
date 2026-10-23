@@ -1,20 +1,20 @@
 ---
-title : "Access S3 from on-premises"
+title: "Reference: Hybrid S3 access"
 date : 2024-01-01
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
 ---
 
-#### Overview
+> **FCAJ reference material — not the personal workshop or evidence of completed practice.** This page contains newly written concept notes linking to the source, rather than republishing its walkthrough or sample images.
 
-+ In this section, you will create an Interface endpoint to access Amazon S3 from a simulated on-premises environment. The Interface endpoint will allow you to route to Amazon S3 over a VPN connection from your simulated on-premises environment.
+The source simulates an on-premises network connected to an AWS VPC. Connectivity, endpoint reachability and name resolution must be reviewed together; they are study topics rather than components deployed by Policy Assistant.
 
-+ Why using **Interface endpoint**: 
-    + Gateway endpoints only work with resources running in the VPC where they are created. Interface endpoints work with resources running in VPC, and also resources running in on-premises environments. Connectivty from your on-premises environment to the cloud can be provided by AWS Site-to-Site VPN or AWS Direct Connect.
-    + Interface endpoints allow you to connect to services powered by AWS PrivateLink. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs (referred to as PrivateLink Endpoint Services), and supported AWS Marketplace Partner services. For this workshop, we will focus on connecting to Amazon S3.
+## Source and scope
 
-![Interface endpoint architecture](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/diagram3.png)
+- [Reference page in the FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/5.4-s3-onprem/).
+- [Related AWS Study Group S3/VPC workshop](https://000111.awsstudygroup.com/).
+- Template images remain in the original local files but are excluded from this trial website output; reuse permission is unverified. Attribution does not substitute for permission.
+- The front matter date is historical template metadata, not a student practice date. No new AWS results are created or inferred here.
 
-
-
+[Read the personal AWS Policy Assistant workshop](../5.7-policyassistant/). Missing student-authored architecture and student evidence remain PENDING.

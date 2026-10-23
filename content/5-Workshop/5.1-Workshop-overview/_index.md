@@ -1,18 +1,20 @@
 ---
-title : "Introduction"
+title: "Reference: VPC endpoint concepts"
 date : 2024-01-01 
 weight : 1 
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+> **FCAJ reference material — not the personal workshop or evidence of completed practice.** This page contains newly written concept notes linking to the source, rather than republishing its walkthrough or sample images.
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+A gateway endpoint connects VPC route tables to S3; an interface endpoint uses PrivateLink network interfaces. This reference lab illustrates hybrid networking, while Policy Assistant uses its own serverless architecture without a VPC/NAT.
 
-![overview](/aws-internship-worklog/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+## Source and scope
+
+- [Reference page in the FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/5.1-workshop-overview/).
+- [Related AWS Study Group S3/VPC workshop](https://000111.awsstudygroup.com/).
+- Template images remain in the original local files but are excluded from this trial website output; reuse permission is unverified. Attribution does not substitute for permission.
+- The front matter date is historical template metadata, not a student practice date. No new AWS results are created or inferred here.
+
+[Read the personal AWS Policy Assistant workshop](../5.7-policyassistant/). Missing student-authored architecture and student evidence remain PENDING.

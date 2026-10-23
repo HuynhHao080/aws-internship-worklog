@@ -1,43 +1,20 @@
 ---
-title : "Create an S3 Interface endpoint"
+title: "Reference: S3 interface endpoint"
 date : 2024-01-01
 weight : 2
 chapter : false
 pre : " <b> 5.4.2 </b> "
 ---
 
-In this section you will create and test an S3 interface endpoint using the simulated on-premises environment deployed as part of this workshop.
+> **FCAJ reference material — not the personal workshop or evidence of completed practice.** This page contains newly written concept notes linking to the source, rather than republishing its walkthrough or sample images.
 
-1. Return to the Amazon VPC menu. In the navigation pane, choose Endpoints, then click Create Endpoint.
+An interface endpoint depends on subnet placement, security group rules and DNS settings. These controls should match the source lab scenario; adding an endpoint is unnecessary for the currently accepted Policy Assistant test design.
 
-2. In Create endpoint console:
-+ Name the interface endpoint
-+ In Service category, choose **aws services** 
+## Source and scope
 
-![name](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint1.png)
+- [Reference page in the FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/).
+- [Related AWS Study Group S3/VPC workshop](https://000111.awsstudygroup.com/).
+- Template images remain in the original local files but are excluded from this trial website output; reuse permission is unverified. Attribution does not substitute for permission.
+- The front matter date is historical template metadata, not a student practice date. No new AWS results are created or inferred here.
 
-3.  In the Search box, type S3 and press Enter. Select the endpoint named com.amazonaws.us-east-1.s3. Ensure that the Type column indicates Interface.
-
-![service](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint2.png)
-
-4. For VPC, select VPC Cloud from the drop-down.
-{{% notice warning %}}
-Make sure to choose "VPC Cloud" and not "VPC On-prem"
-{{% /notice %}}
-+ Expand **Additional settings** and ensure that Enable DNS name is *not* selected (we will use this in the next part of the workshop)
-
-![vpc](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint3.png)
-
-5. Select 2 subnets in the following AZs: us-east-1a and us-east-1b
-
-![subnets](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint4.png)
-
-6. For Security group, choose SGforS3Endpoint:
-
-![sg](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint5.png)
-
-7. Keep the default policy - full access and click Create endpoint
-
-![success](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint-success.png)
-
-Congratulation on successfully creating S3 interface endpoint. In the next step, we will test the interface endpoint.
+[Read the personal AWS Policy Assistant workshop](../../5.7-policyassistant/). Missing student-authored architecture and student evidence remain PENDING.

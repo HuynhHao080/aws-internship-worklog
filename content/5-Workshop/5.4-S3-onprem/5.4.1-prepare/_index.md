@@ -1,57 +1,20 @@
 ---
-title : "Prepare the environment"
+title: "Reference: Hybrid environment preparation"
 date : 2024-01-01
 weight : 1
 chapter : false
 pre : " <b> 5.4.1 </b> "
 ---
 
-To prepare for this part of the workshop you will need to:
-+ Deploying a CloudFormation stack 
-+ Modifying a VPC route table. 
+> **FCAJ reference material — not the personal workshop or evidence of completed practice.** This page contains newly written concept notes linking to the source, rather than republishing its walkthrough or sample images.
 
-These components work together to simulate on-premises DNS forwarding and name resolution.
+The reference separates the simulated on-premises environment from the cloud VPC. Confirm ownership, routing and cost assumptions before any future lab run; no instance IDs or account identifiers from source screenshots are reused as project configuration.
 
-#### Deploy the CloudFormation stack
+## Source and scope
 
-The CloudFormation template will create additional services to support an on-premises simulation:
-+ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3 endpoint
-+ One Route 53 Inbound Resolver endpoint that enables "VPC Cloud" to resolve inbound DNS resolution requests to the Private Hosted Zone
-+ One Route 53 Outbound Resolver endpoint that enables "VPC On-prem" to forward DNS requests for S3 to "VPC Cloud"
+- [Reference page in the FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/5.4-s3-onprem/5.4.1-prepare/).
+- [Related AWS Study Group S3/VPC workshop](https://000111.awsstudygroup.com/).
+- Template images remain in the original local files but are excluded from this trial website output; reuse permission is unverified. Attribution does not substitute for permission.
+- The front matter date is historical template metadata, not a student practice date. No new AWS results are created or inferred here.
 
-![route 53 diagram](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/route53.png)
-
-1. Click the following link to open the [AWS CloudFormation console](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup). The required template will be pre-loaded into the menu. Accept all default and click Create stack.
-
-![Create stack](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/create-stack.png)
-
-![Button](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/create-stack-button.png)
-
-It may take a few minutes for stack deployment to complete. You can continue with the next step without waiting for the deployemnt to finish.
-
-#### Update on-premise private route table
-
-This workshop uses a strongSwan VPN running on an EC2 instance to simulate connectivty between an on-premises datacenter and the AWS cloud. Most of the required components are provisioned before your start. To finalize the VPN configuration, you will modify the "VPC On-prem" routing table to direct traffic destined for the cloud to the strongSwan VPN instance.
-
-1. Open the Amazon EC2 console 
-
-2. Select the instance named infra-vpngw-test. From the Details tab, copy the Instance ID and paste this into your text editor
-
-![ec2 id](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png)
-
-3. Navigate to the VPC menu by using the Search box at the top of the browser window.
-
-4. Click on Route Tables, select the RT Private On-prem route table, select the Routes tab, and click Edit Routes.
-
-![rt](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/rt.png)
-
-5. Click Add route.
-+ Destination: your Cloud VPC cidr range
-+ Target: ID of your infra-vpngw-test instance (you saved in your editor at step 1)
-
-![add route](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/add-route.png)
-
-6. Click Save changes
-
-
-
+[Read the personal AWS Policy Assistant workshop](../../5.7-policyassistant/). Missing student-authored architecture and student evidence remain PENDING.

@@ -1,19 +1,20 @@
 ---
-title : "Giới thiệu"
+title: "Tham khảo: Khái niệm VPC endpoint"
 date : 2024-01-01 
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+> **Tài liệu tham khảo FCAJ — không phải Workshop cá nhân hoặc minh chứng đã thực hành.** Trang này là ghi chú khái niệm được biên soạn lại để chỉ dẫn tới nguồn, không tái bản hướng dẫn và ảnh mẫu.
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+Gateway endpoint kết nối route table trong VPC tới S3; interface endpoint sử dụng network interface của PrivateLink. Lab tham khảo minh họa mạng hybrid, còn Policy Assistant dùng kiến trúc serverless riêng không có VPC/NAT.
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+## Nguồn và phạm vi
 
-![overview](/aws-internship-worklog/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+- [Trang tham khảo trong template FCAJ](https://workshop-sample.awsfcaj.com/5-workshop/5.1-workshop-overview/) (nguồn tiếng Anh).
+- [Workshop S3/VPC liên quan của AWS Study Group](https://000111.awsstudygroup.com/).
+- Ảnh template được giữ trong bản gốc local nhưng không đưa vào output website thử nghiệm; quyền đăng lại chưa được xác minh. Dẫn nguồn không thay thế quyền sử dụng.
+- Ngày trong front matter là dữ liệu lịch sử của template, không phải ngày sinh viên thực hành. Không có kết quả AWS mới được tạo hoặc suy diễn tại đây.
+
+[Đọc Workshop cá nhân AWS Policy Assistant](../5.7-policyassistant/). Kiến trúc tự vẽ và minh chứng sinh viên còn thiếu tiếp tục ở trạng thái PENDING.

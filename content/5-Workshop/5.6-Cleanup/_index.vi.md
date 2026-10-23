@@ -1,37 +1,20 @@
 ---
-title : "Dọn dẹp tài nguyên"
+title: "Tham khảo: Lập kế hoạch dọn dẹp lab tham khảo"
 date : 2024-01-01
 weight : 6
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
 
-#### Dọn dẹp tài nguyên
+> **Tài liệu tham khảo FCAJ — không phải Workshop cá nhân hoặc minh chứng đã thực hành.** Trang này là ghi chú khái niệm được biên soạn lại để chỉ dẫn tới nguồn, không tái bản hướng dẫn và ảnh mẫu.
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Hướng dẫn cleanup của nguồn chỉ áp dụng cho tài nguyên đã tạo trong lab độc lập đó. Không dùng để xóa Policy Assistant, dữ liệu Retain hoặc artifact triển khai dùng chung; cleanup dự án vẫn cần phê duyệt riêng.
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+## Nguồn và phạm vi
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+- [Trang tham khảo trong template FCAJ](https://workshop-sample.awsfcaj.com/5-workshop/5.6-cleanup/) (nguồn tiếng Anh).
+- [Workshop S3/VPC liên quan của AWS Study Group](https://000111.awsstudygroup.com/).
+- Ảnh template được giữ trong bản gốc local nhưng không đưa vào output website thử nghiệm; quyền đăng lại chưa được xác minh. Dẫn nguồn không thay thế quyền sử dụng.
+- Ngày trong front matter là dữ liệu lịch sử của template, không phải ngày sinh viên thực hành. Không có kết quả AWS mới được tạo hoặc suy diễn tại đây.
 
-![hosted zone](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/delete-zone.png)
-
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
-
-![hosted zone](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/vpc.png)
-
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
-
-![delete stack](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/delete-stack.png)
-
-5. Xóa các S3 bucket
-
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+[Đọc Workshop cá nhân AWS Policy Assistant](../5.7-policyassistant/). Kiến trúc tự vẽ và minh chứng sinh viên còn thiếu tiếp tục ở trạng thái PENDING.

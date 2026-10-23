@@ -1,32 +1,20 @@
 ---
-title : "Clean up"
+title: "Reference: Reference lab cleanup planning"
 date : 2024-01-01
 weight : 6
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
-Congratulations on completing this workshop! 
-In this workshop, you learned architecture patterns for accessing Amazon S3 without using the Public Internet. 
-+ By creating a gateway endpoint, you enabled direct communication between EC2 resources and Amazon S3, without traversing an Internet Gateway. 
-+ By creating an interface endpoint you extended S3 connectivity to resources running in your on-premises data center via AWS Site-to-Site VPN or Direct Connect. 
 
-#### clean up
-1. Navigate to Hosted Zones on the left side of Route 53 console. Click the name of *s3.us-east-1.amazonaws.com* zone. Click Delete and confirm deletion by typing delete. 
+> **FCAJ reference material — not the personal workshop or evidence of completed practice.** This page contains newly written concept notes linking to the source, rather than republishing its walkthrough or sample images.
 
-![hosted zone](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+The source cleanup belongs only to resources provisioned for that independent lab. It must not be used to delete Policy Assistant resources, retained data or shared deployment artifacts; project cleanup still requires separate owner approval.
 
-2. Disassociate the Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+## Source and scope
 
-![hosted zone](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/vpc.png)
+- [Reference page in the FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/5.6-cleanup/).
+- [Related AWS Study Group S3/VPC workshop](https://000111.awsstudygroup.com/).
+- Template images remain in the original local files but are excluded from this trial website output; reuse permission is unverified. Attribution does not substitute for permission.
+- The front matter date is historical template metadata, not a student practice date. No new AWS results are created or inferred here.
 
-4. Open the CloudFormation console  and delete the two CloudFormation Stacks that you created for this lab:
-+ PLOnpremSetup
-+ PLCloudSetup
-
-![delete stack](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/delete-stack.png)
-
-5. Delete S3 buckets
-+ Open S3 console
-+ Choose the bucket we created for the lab, click and confirm empty. Click delete and confirm delete.
-
-![delete s3](/aws-internship-worklog/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+[Read the personal AWS Policy Assistant workshop](../5.7-policyassistant/). Missing student-authored architecture and student evidence remain PENDING.

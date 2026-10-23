@@ -1,43 +1,20 @@
 ---
-title : "Tạo một S3 Interface endpoint"
+title: "Tham khảo: S3 interface endpoint"
 date : 2024-01-01
 weight : 2
 chapter : false
 pre : " <b> 5.4.2 </b> "
 ---
 
-Trong phần này, bạn sẽ tạo và kiểm tra Interface Endpoint  S3 bằng cách sử dụng môi trường truyền thống mô phỏng.
+> **Tài liệu tham khảo FCAJ — không phải Workshop cá nhân hoặc minh chứng đã thực hành.** Trang này là ghi chú khái niệm được biên soạn lại để chỉ dẫn tới nguồn, không tái bản hướng dẫn và ảnh mẫu.
 
-1. Quay lại Amazon VPC menu. Trong thanh điều hướng bên trái, chọn Endpoints, sau đó click Create Endpoint.
+Interface endpoint phụ thuộc subnet, security group và cấu hình DNS. Các kiểm soát này phải khớp kịch bản lab nguồn; không cần thêm endpoint vào thiết kế Policy Assistant test đã được nghiệm thu.
 
-2. Trong Create endpoint console:
-+ Đặt tên interface endpoint
-+ Trong Service category, chọn **aws services** 
+## Nguồn và phạm vi
 
-![name](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint1.png)
+- [Trang tham khảo trong template FCAJ](https://workshop-sample.awsfcaj.com/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/) (nguồn tiếng Anh).
+- [Workshop S3/VPC liên quan của AWS Study Group](https://000111.awsstudygroup.com/).
+- Ảnh template được giữ trong bản gốc local nhưng không đưa vào output website thử nghiệm; quyền đăng lại chưa được xác minh. Dẫn nguồn không thay thế quyền sử dụng.
+- Ngày trong front matter là dữ liệu lịch sử của template, không phải ngày sinh viên thực hành. Không có kết quả AWS mới được tạo hoặc suy diễn tại đây.
 
-3.  Trong Search box, gõ S3 và nhấn Enter. Chọn endpoint có tên com.amazonaws.us-east-1.s3. Đảm bảo rằng cột Type có giá trị Interface.
-
-![service](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint2.png)
-
-4. Đối với VPC, chọn VPC Cloud từ drop-down.
-{{% notice warning %}}
-Đảm bảo rằng bạn chọn "VPC Cloud" và không phải "VPC On-prem"
-{{% /notice %}}
-+ Mở rộng **Additional settings** và đảm bảo rằng Enable DNS name *không* được chọn (sẽ sử dụng điều này trong phần tiếp theo của workshop)
-
-![vpc](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint3.png)
-
-5. Chọn 2 subnets trong AZs sau: us-east-1a and us-east-1b
-
-![subnets](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint4.png)
-
-6. Đối với Security group, chọn SGforS3Endpoint:
-
-![sg](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint5.png)
-
-7. Giữ default policy - full access và click Create endpoint
-
-![success](/aws-internship-worklog/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint-success.png)
-
-Chúc mừng bạn đã tạo thành công S3 interface endpoint. Ở bước tiếp theo, chúng ta sẽ kiểm tra interface endpoint.
+[Đọc Workshop cá nhân AWS Policy Assistant](../../5.7-policyassistant/). Kiến trúc tự vẽ và minh chứng sinh viên còn thiếu tiếp tục ở trạng thái PENDING.

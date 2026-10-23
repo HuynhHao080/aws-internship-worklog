@@ -6,32 +6,19 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-## Main workshop: Policy Assistant
+## Personal workshop: AWS Policy Assistant
 
-Start with **5.7 Policy Assistant** below: local/deployment/testing/monitoring/cleanup, student architecture and COST. Source is locally checked; AWS acceptance is pending. Chapters 5.1–5.6 are a separate S3/VPC learning lab, not the application architecture.
+[Read the Policy Assistant guide](5.7-policyassistant/): architecture, deployment, testing, monitoring, COST and controlled cleanup. Saved evidence: **B4 19 PASS; historical B5 FAIL; B5-R7 browser 10 PASS**. D3-A contained the legacy identity; D11 published sanitized history with an initial CI failure; D15 CI completed 19/19 steps PASS. This is not a production-ready claim.
 
+The AWS test environment remains maintained, without cleanup or an approved demo end date. Missing student-authored architecture, attendance and personal evidence remain PENDING; the template does not replace them.
 
+## FCAJ reference material: S3/VPC Endpoints
 
-> This is an independent S3/VPC Endpoint workshop, not the Policy Assistant deployment guide or proof that the application uses VPC Endpoints.
+Sections 5.1–5.6 below contain concept notes and links to the [FCAJ template](https://workshop-sample.awsfcaj.com/5-workshop/), rather than a copied walkthrough or republication of its80 sample images. These are not Policy Assistant architecture or evidence of student lab execution. Original images are preserved locally; unverified reuse permission is the reason they are excluded from website output.
 
-
-# Secure Hybrid Access to S3 using VPC Endpoints
-
-#### Overview
-
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
-
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
-
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
-
-#### Content
-
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-prerequiste/)
-3. [Access S3 from VPC](5.3-s3-vpc/)
-4. [Access S3 from On-premises](5.4-s3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-policy/)
-6. [Clean up](5.6-cleanup/)
+- [Reference: VPC endpoint concepts](5.1-workshop-overview/)
+- [Reference: Lab prerequisites](5.2-prerequiste/)
+- [Reference: S3 access from a VPC](5.3-s3-vpc/)
+- [Reference: Hybrid S3 access](5.4-s3-onprem/)
+- [Reference: Endpoint policy boundaries](5.5-policy/)
+- [Reference: Reference lab cleanup planning](5.6-cleanup/)

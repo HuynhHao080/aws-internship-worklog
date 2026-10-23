@@ -6,33 +6,19 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-## Workshop chính: Policy Assistant
+## Workshop cá nhân: AWS Policy Assistant
 
-Đọc chương **5.7 Policy Assistant** bên dưới: hướng dẫn local/deploy/test/monitoring/cleanup, kiến trúc tự vẽ và COST. Đã kiểm mã local; AWS thật chưa nghiệm thu. Các mục 5.1–5.6 là bài lab S3/VPC độc lập, không phải kiến trúc ứng dụng.
+[Đọc hướng dẫn Policy Assistant](5.7-policyassistant/): kiến trúc, triển khai, kiểm thử, monitoring, COST và cleanup có kiểm soát. Evidence đã lưu: **B4 19 PASS; B5 FAIL lịch sử; B5-R7 browser 10 PASS**. D3-A đã containment legacy identity; D11 publish lịch sử sanitized với CI đầu FAIL; D15 CI 19/19 steps PASS. Không tuyên bố production-ready.
 
+Môi trường AWS test vẫn duy trì, chưa cleanup và chưa chốt ngày kết thúc demo. Kiến trúc tự vẽ, chuyên cần và minh chứng cá nhân chưa đủ vẫn PENDING; không dùng template để thay thế.
 
+## Tài liệu tham khảo FCAJ: S3/VPC Endpoint
 
-> Workshop S3/VPC Endpoint là bài học độc lập, không phải hướng dẫn triển khai hoặc bằng chứng sử dụng VPC Endpoint của Policy Assistant.
+Các mục 5.1–5.6 bên dưới chỉ giữ ghi chú khái niệm và liên kết tới [template FCAJ](https://workshop-sample.awsfcaj.com/5-workshop/), không sao chép nguyên walkthrough hoặc tái bản 80 ảnh mẫu. Chúng không phải kiến trúc Policy Assistant và không chứng minh sinh viên đã chạy lab. Ảnh gốc được bảo toàn local; quyền đăng lại chưa xác minh nên bị loại khỏi output website.
 
-
-
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
-
-#### Tổng quan
-
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
-
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
-
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
-
-#### Nội dung
-
-1. [Tổng quan về workshop](5.1-workshop-overview/)
-2. [Chuẩn bị](5.2-prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-s3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-s3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-policy/)
-6. [Dọn dẹp tài nguyên](5.6-cleanup/)
+- [Tham khảo: Khái niệm VPC endpoint](5.1-workshop-overview/)
+- [Tham khảo: Điều kiện chuẩn bị lab](5.2-prerequiste/)
+- [Tham khảo: Truy cập S3 từ VPC](5.3-s3-vpc/)
+- [Tham khảo: Truy cập S3 từ môi trường hybrid](5.4-s3-onprem/)
+- [Tham khảo: Ranh giới endpoint policy](5.5-policy/)
+- [Tham khảo: Lập kế hoạch dọn dẹp lab tham khảo](5.6-cleanup/)

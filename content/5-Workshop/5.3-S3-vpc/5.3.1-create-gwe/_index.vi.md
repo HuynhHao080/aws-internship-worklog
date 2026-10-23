@@ -1,40 +1,20 @@
 ---
-title : "Tạo một Gateway Endpoint"
+title: "Tham khảo: Cấu hình gateway endpoint"
 date : 2024-01-01 
 weight : 1
 chapter : false
 pre : " <b> 5.3.1 </b> "
 ---
 
-1. Mở [Amazon VPC console](https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#Home:)
-2. Trong thanh điều hướng, chọn **Endpoints**, click **Create Endpoint**:
+> **Tài liệu tham khảo FCAJ — không phải Workshop cá nhân hoặc minh chứng đã thực hành.** Trang này là ghi chú khái niệm được biên soạn lại để chỉ dẫn tới nguồn, không tái bản hướng dẫn và ảnh mẫu.
 
-{{% notice note %}}
-Bạn sẽ thấy 6 điểm cuối VPC hiện có hỗ trợ AWS Systems Manager (SSM). Các điểm cuối này được Mẫu CloudFormation triển khai tự động cho workshop này.
-{{% /notice %}}
+Gateway endpoint áp dụng cho route table được chọn và có endpoint policy. Khi đọc nguồn cần phân biệt định tuyến, quyền IAM và bucket policy; có endpoint không tự cấp quyền truy cập dữ liệu S3.
 
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/endpoints.png)
+## Nguồn và phạm vi
 
-3. Trong Create endpoint console:
-+ Đặt tên cho endpoint: s3-gwe
-+ Trong service category, chọn **aws services**
+- [Trang tham khảo trong template FCAJ](https://workshop-sample.awsfcaj.com/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/) (nguồn tiếng Anh).
+- [Workshop S3/VPC liên quan của AWS Study Group](https://000111.awsstudygroup.com/).
+- Ảnh template được giữ trong bản gốc local nhưng không đưa vào output website thử nghiệm; quyền đăng lại chưa được xác minh. Dẫn nguồn không thay thế quyền sử dụng.
+- Ngày trong front matter là dữ liệu lịch sử của template, không phải ngày sinh viên thực hành. Không có kết quả AWS mới được tạo hoặc suy diễn tại đây.
 
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/create-s3-gwe1.png)
-
-+ Trong **Services**, gõ "s3" trong hộp tìm kiếm và chọn dịch vụ với loại **gateway**
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/services.png)
-
-+ Đối với VPC, chọn **VPC Cloud** từ drop-down menu.
-+ Đối với Route tables, chọn bảng định tuyến mà đã liên kết với 2 subnets (lưu ý: đây không phải là bảng định tuyến chính cho VPC mà là bảng định tuyến thứ hai do CloudFormation tạo).
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/vpc.png)
-
-+ Đối với Policy, để tùy chọn mặc định là Full access để cho phép toàn quyền truy cập vào dịch vụ. Bạn sẽ triển khai VPC endpoint policy trong phần sau để chứng minh việc hạn chế quyền truy cập vào S3 bucket dựa trên các policies.
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/policy.png)
-
-+ Không thêm tag vào VPC endpoint.
-+ Click Create endpoint, click x sau khi nhận được thông báo tạo thành công.
-
-![endpoint](/aws-internship-worklog/images/5-Workshop/5.3-S3-vpc/complete.png)
+[Đọc Workshop cá nhân AWS Policy Assistant](../../5.7-policyassistant/). Kiến trúc tự vẽ và minh chứng sinh viên còn thiếu tiếp tục ở trạng thái PENDING.
