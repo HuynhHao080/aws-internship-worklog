@@ -4,21 +4,23 @@ date: 2026-10-21
 weight: 5
 ---
 
-## Current D1 status —2026-10-22
+## Verified status — 23 October 2026
 
-**B4 API/SDK19PASS; original B5 browserFAIL retained; B5-R6 API-only UPDATE_COMPLETE; B5-R7 browser10PASS. C0:45resources/4Retain. GO bounded test demo, NO-GO production.** D1 is local review, no AWS/E2E or website publishing.
+**B4 API/SDK: 19 PASS; original B5 browser: historical FAIL; B5-R7 browser: 10 PASS. GO for the accepted test-demo scope; NO-GO production.** B4 retained one browser NOT_RUN at that time; B5-R7 is separate browser evidence, not a rewrite of the historical result.
 
-Approximately1diagnostic DLQ message/ALARM remains; alarm SNS topic has0subscriptions. Account20USD Budget is not a cap; email delivery unverified. No cleanup. **Owner has not set the environment end date.** Rotation/revocation proof for credential literals in old Git history is required before public push.
+The legacy Cognito identity was **disabled and globally signed out (D3-A)**. Containment did not change its password or prove instant revocation of every offline-validated JWT or absence of unauthorized access. **D11 published sanitized application history; its first CI run FAILED**. **D15 published the test fix: [GitHub Actions 19/19 steps PASS](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/39901988136), 0 FAIL/0 SKIPPED**. These are workflow steps, distinct from B4's 19 AWS API/SDK cases. The [D11 failed run](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/39899173855) remains historical evidence. D17 changes documentation only, with no deployment or AWS E2E rerun.
 
-The fix uses virtual S3 addressing for regional POST/GET, without broadening IAM/CSP/CORS. Real Edge R7 used2PDFs/1,218bytes,3logins/3logouts,27requests; not a load benchmark. Deployed API has new ZIP; Worker/Recovery retain old ZIP. Shared-CodeUri source SAM is not a replay of the API-only candidate.
+Test demo: [https://d3ataim7dfsl7t.cloudfront.net/](https://d3ataim7dfsl7t.cloudfront.net/). Current public source: [a044936](https://github.com/HuynhHao080/aws-policy-assistant/tree/a04493682a417761f534954a1f8d38cc75d8a87b). New source/CI does not imply a new AWS deployment: the API uses the B5-R6 regional virtual-hosted S3 fix while Worker/Recovery retain their prior artifacts. IAM/CSP/CORS were not broadened. Keep local/mocked screenshots labelled accordingly.
 
-Evidence is in the local application repo: docs/aws-browser-b5r7-result.md, docs/cleanup-c0-inventory-and-acceptance.md, docs/d1-handover-review.md. Do not assume files are already pushed. Local/mocked screenshots do not replace AWS proof. Student must draw/review/explain their own architecture with official AWS icons; assistant reference diagrams do not establish student authorship.
+The configured **account-wide Budget is 20 USD/month** (Actual 80% = 16 USD, Actual 100% and Forecasted 100% = 20 USD); the **10 USD tag-filtered test Budget is PENDING**. Budgets are not hard spending caps and do not stop resources; email delivery remains unverified. The approximately 6.6306 USD/month test estimate is an assumed-load model, not an invoice or a current AWS forecast.
+
+The AWS test environment remains maintained: **no cleanup and no owner-approved demo end/cleanup date**. The C0 snapshot recorded 45 resources/4 Retain, approximately one diagnostic DLQ message/ALARM and zero SNS subscriptions; those are not freshly queried AWS metrics today. Retained resources can continue accruing charges. This is not production-ready.
+
+Public evidence: [B4](https://github.com/HuynhHao080/aws-policy-assistant/blob/a04493682a417761f534954a1f8d38cc75d8a87b/docs/aws-test-e2e-b4-result.md), [B5-R7](https://github.com/HuynhHao080/aws-policy-assistant/blob/a04493682a417761f534954a1f8d38cc75d8a87b/docs/aws-browser-b5r7-result.md), [C0](https://github.com/HuynhHao080/aws-policy-assistant/blob/a04493682a417761f534954a1f8d38cc75d8a87b/docs/cleanup-c0-inventory-and-acceptance.md). Containment is supported by filtered D3-A evidence without publishing the username/password/tokens. Git rewriting cannot erase old clones/caches. Student architecture authorship and attendance evidence remain student-confirmation tasks, not invented replacements.
 
 ### Earlier snapshots — historical, not current status
 
-Pending/not-deployed/browser-incomplete statements below are superseded by the D1 summary; original B5FAIL is not rewritten as PASS.
-
-
+Pending/not-deployed/browser-incomplete statements and old security/publication gates below describe earlier plans/snapshots. Use the verified summary above for current reporting; keep the historical B5 FAIL. D17 does not publish the Worklog website.
 
 > **B5-R local remediation:** real local Edge confirms CSP connect-src blocks the global S3 hostname. One-line virtual addressing fix makes regional POST/GET and local hash pipeline pass. 129 backend/17 frontend/3 browser fixture/1 full-stack local plus SAM lint/build PASS;9 live integration skips=NOT_RUN. No CSP/CORS/IAM/template/frontend change, artifact upload or deployment; B5 AWS remains FAIL. Original AWS cause is LIKELY without exact violation capture; local mechanism CONFIRMED. Separate artifact/change-set/deploy/rerun approvals required; cleanup C separate.
 

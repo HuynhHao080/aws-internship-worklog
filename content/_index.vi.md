@@ -5,7 +5,7 @@ weight: 1
 chapter: false
 ---
 
-> **Cần sinh viên xác nhận:** Thông tin cá nhân, thời gian, xếp loại, trải nghiệm mentor/phúc lợi và nội dung sự kiện có sẵn chưa được xác minh. Không coi văn bản mẫu hoặc ảnh có sẵn là minh chứng đủ 10 buổi office/3 sự kiện có check-in rõ mặt. Xem mục Audit để bổ sung dữ liệu thật.
+> **D17 — quyền công khai:** Chủ dự án đồng ý giữ profile, liên hệ và ảnh cá nhân phục vụ FCAJ. Vẫn cần đối soát thông tin/khung thời gian, xếp loại, trải nghiệm và minh chứng 10 buổi office/3 sự kiện thật; ảnh có sẵn không tự chứng minh chuyên cần. Quyền sử dụng hình ảnh của người khác cần có căn cứ.
 
 
 # Báo cáo thực tập
@@ -14,7 +14,7 @@ chapter: false
 
 &emsp; **Số điện thoại:** <a href="tel:0326798878">0326798878</a>
 
-&emsp; **Email:** PENDING_OWNER_PUBLIC_CONTACT_APPROVAL
+&emsp; **Email:** <a href="mailto:huynhhao080@gmail.com">huynhhao080@gmail.com</a>
 
 &emsp; **Trường:** Đại học Công Nghệ Đồng Nai
 
@@ -31,6 +31,9 @@ chapter: false
 ![Ảnh đại diện của bạn](/aws-internship-worklog/images/avatar.png)
 
 
+
+
+> **Cập nhật 23/10/2026:** B4 19 PASS; B5 FAIL lịch sử; B5-R7 10 PASS; D3-A đã containment; D15 CI 19/19 steps PASS. [Trạng thái và evidence](/aws-internship-worklog/vi/8-policyassistant/). AWS test vẫn duy trì, chưa có ngày cleanup được duyệt.
 
 ### Nội dung báo cáo
 

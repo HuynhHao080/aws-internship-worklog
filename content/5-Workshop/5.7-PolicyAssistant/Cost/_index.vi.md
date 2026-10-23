@@ -54,7 +54,11 @@ Mô hình áp giá biên có phí cho toàn bộ quantity để thể hiện ng�
 
 ## Tối ưu, cảnh báo và retention
 
-Chi phí tăng do version S3 tồn trữ, Scan, download, polling/retry và log thừa. Sau khi được duyệt, sinh viên tự tạo Budget **10 USD/tháng**, actual alert 80%/100%, forecast 100%, chọn và xác nhận người nhận thật. Alert không phải giới hạn cứng; chưa tạo budget hoặc gửi email. Kiểm [giá Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/pricing/) trước khi bật action/report có phí. Xem Bills/Cost Explorer theo region/tag mỗi ngày trong tuần demo.
+Chi phí tăng do version S3 tồn trữ, Scan, download, polling/retry và log thừa. Budget thực tế `policy-assistant-account-monthly` là **20 USD/tháng toàn account**, không lọc region/service/tag, dùng UnblendedCost và loại Credit/Refund. Ba cảnh báo: Actual 80% (16 USD), Actual 100% (20 USD), Forecasted 100% (20 USD). Không Budget Actions; giữ nguyên Budget 5 USD hiện có.
+
+Budget test **10 USD/tháng theo tag là PENDING**, chưa được coi là hoạt động vì cost-allocation tags chưa xác minh đủ điều kiện. Budget 20 USD không phải hard spending cap, không tự dừng dịch vụ, không phải credits được cấp thêm; Billing/forecast có độ trễ và email delivery chưa được chứng minh. Không ghi email recipient lên website. D17 chỉ cập nhật tài liệu, không tạo/sửa Budget hoặc đọc Billing mới.
+
+Môi trường AWS test vẫn duy trì; **chưa cleanup, chưa có ngày kết thúc được chủ dự án phê duyệt**. Snapshot C0/chi phí lịch sử không phải hóa đơn hiện tại. [Giá Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/pricing/) là nguồn tham khảo khi duyệt thay đổi sau này; không tự bật actions/reports.
 
 IaC giữ log 30 ngày, DLQ 14 ngày; S3 current expiry 365 ngày và noncurrent expiry thêm 365 ngày từ lúc thành bản cũ. Expiry current trong versioning tạo delete marker, byte có thể còn gần thêm một năm. Không nói dữ liệu xóa hết sau 365 ngày. Không tự rút retention dữ liệu đang dùng.
 

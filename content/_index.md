@@ -5,7 +5,7 @@ weight: 1
 chapter: false
 ---
 
-> **Student confirmation required:** Existing personal data, dates, ratings, mentor/benefit experiences and event claims are unverified. Template text or existing images do not establish 10 office sessions/3 events with identifiable face check-ins. Complete the Audit evidence ledger using real records.
+> **D17 — public-display approval:** The owner approved keeping the existing profile, contact details and personal photos for FCAJ. Profile accuracy/assessed dates, ratings, experiences and genuine 10-office/3-event evidence still require confirmation; existing images do not establish attendance. Other people's image rights need an appropriate basis.
 
 
     
@@ -16,7 +16,7 @@ chapter: false
 
 &emsp; **Phone Number:** <a href="tel:0326798878">0326798878</a>
 
-&emsp; **Email:** PENDING_OWNER_PUBLIC_CONTACT_APPROVAL
+&emsp; **Email:** <a href="mailto:huynhhao080@gmail.com">huynhhao080@gmail.com</a>
 
 &emsp; **University:** Dong Nai Technology University
 
@@ -31,6 +31,9 @@ chapter: false
 &emsp; **Internship Duration:** From 1/07/2026 to 31/12/2026
 
 ![Your profile picture](/aws-internship-worklog/images/avatar.png)
+
+
+> **23 October 2026 update:** B4 19 PASS; historical B5 FAIL; B5-R7 10 PASS; D3-A contained; D15 CI 19/19 steps PASS. [Status and evidence](/aws-internship-worklog/8-policyassistant/). AWS test remains maintained with no approved cleanup date.
 
 ### Report Content
 

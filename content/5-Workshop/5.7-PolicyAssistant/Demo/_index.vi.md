@@ -4,11 +4,11 @@ date: 2026-10-21
 weight: 3
 ---
 
-> Cập nhật bằng chứng 21/10/2026: B1 stack/B2 frontend/B3 users đã hoàn tất; B4 API/SDK 19 PASS, browser thực tế NOT_RUN. Xem chương AWS E2E. Các đoạn pending/not-deployed dưới đây là kế hoạch/lịch sử trước B4, không phải trạng thái hiện hành. Không chạy lại poison hoặc demo có writes khi chưa được duyệt tiếp.
+> Hiện trạng 23/10/2026: B4 API/SDK 19 PASS; B5 FAIL lịch sử; B5-R7 browser 10 PASS; D3-A đã containment; D11 publish sanitized history/CI FAIL; D15 CI 19/19 steps PASS. Demo test: [https://d3ataim7dfsl7t.cloudfront.net/](https://d3ataim7dfsl7t.cloudfront.net/). Không production-ready; không chạy login/upload/poison mới nếu chưa có phê duyệt phù hợp.
 
 # Demo và bảo vệ 5–7 phút
 
-**Chỉ dùng nhãn AWS thật sau khi deploy/kiểm thử thực sự đạt. Hiện candidate mới chưa triển khai.** Nếu dùng local phải giữ nhãn OFFLINE. Không dùng stack cũ để khẳng định đã triển khai release mới.
+**Môi trường test đã triển khai và được nghiệm thu trong phạm vi B5-R7.** D17 chỉ cập nhật tài liệu, không xác minh lại availability hoặc tạo dữ liệu AWS mới. Nếu dùng local phải giữ nhãn OFFLINE. Không dùng stack cũ để mô tả release test. Môi trường vẫn duy trì; chưa có ngày cleanup được duyệt.
 
 | Thời gian | Thao tác / lời giải thích | Bằng chứng |
 |---|---|---|
@@ -42,3 +42,7 @@ Không quay Network, Authorization, mật khẩu, auth response đầy đủ, si
 ## Tự vẽ kiến trúc
 
 Tải [icon AWS chính thức](https://aws.amazon.com/architecture/icons/), đọc `docs/architecture-self-draw.md`. Chính bạn vẽ từng box ứng với resource thật; ghi protocol/identity/data từng mũi tên; vùng global/regional/auth/owner/capability; đường retry/DLQ/recovery. Giữ file chỉnh sửa/ngày và tự luyện giải thích không đọc câu trả lời AI. Mermaid/PNG tham khảo của trợ lý không được nộp làm thiết kế của sinh viên. Chỉ chèn endpoint/sơ đồ thật khi đã có.
+
+## Budget và quyền thao tác
+
+Budget toàn account 20 USD/tháng không phải hard spending cap; Budget test 10 USD theo tag PENDING. Dùng evidence đã lưu cho retry/DLQ. Không tạo message hoặc xóa dữ liệu để làm đẹp alarm; mọi cleanup/Retain cần phê duyệt riêng.

@@ -4,11 +4,11 @@ date: 2026-10-21
 weight: 3
 ---
 
-> Evidence update 2026-10-21: B1 stack/B2 frontend/B3 users completed; B4 API/SDK 19 PASS, real browser NOT_RUN. See AWS E2E chapter. Pending/not-deployed statements below are pre-B4 plans/history, not current status. Do not repeat poison or live demo writes without further approval.
+> Status 23 October 2026: B4 API/SDK 19 PASS; historical B5 FAIL; B5-R7 browser 10 PASS; D3-A contained; D11 sanitized publication/CI FAIL; D15 CI 19/19 steps PASS. Test demo: [https://d3ataim7dfsl7t.cloudfront.net/](https://d3ataim7dfsl7t.cloudfront.net/). Not production-ready; new login/upload/poison activity requires suitable separate approval.
 
 # FCAJ demo script — 5 to 7 minutes
 
-Use after the reviewed AWS test deployment and acceptance. The new test candidate is **not deployed yet**. Fill evidence slots only with actual results. Keep the OFFLINE banner and explain simulation if demonstrating locally. Do not present the old stack as this release.
+**The test environment was deployed and accepted within the B5-R7 scope.** D17 updates documentation only, without a new availability check or AWS test data. Keep the OFFLINE label for local demonstrations and do not present the legacy stack as this release. The environment remains maintained with no approved cleanup date.
 
 | Time | Action | Visible proof |
 |---|---|---|
@@ -41,4 +41,8 @@ Never display Network details, Authorization, passwords, complete auth replies, 
 
 ## Student architecture exercise
 
-Use `docs/architecture-self-draw.md` (the worksheet; application repository) and [official AWS icons](https://aws.amazon.com/architecture/icons/). Draw it yourself, map every box to a real logical resource, label protocol/identity/data on every arrow and show global/regional/auth/owner/capability boundaries plus retry/DLQ/recovery. Save editable source/date. Practice explaining without reading generated answers. Assistant Mermaid/PNG is reference only and must not be submitted as student-authored design. Add the actual test endpoint and student diagram only after they exist.
+Use `docs/architecture-self-draw.md` (the worksheet; application repository) and [official AWS icons](https://aws.amazon.com/architecture/icons/). Draw it yourself, map every box to a real logical resource, label protocol/identity/data on every arrow and show global/regional/auth/owner/capability boundaries plus retry/DLQ/recovery. Save editable source/date. Practice explaining without reading generated answers. Assistant Mermaid/PNG is reference only and must not be submitted as student-authored design. The actual test endpoint is linked above; the student must still supply their own editable architecture diagram.
+
+## Budget and operation boundaries
+
+The account Budget is 20 USD/month, not a hard spending cap; the tag-filtered 10 USD test Budget is PENDING. Use saved retry/DLQ evidence. Do not create messages or delete data to improve alarm appearance; cleanup/Retain operations need separate approval.
