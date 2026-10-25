@@ -62,3 +62,9 @@ Typically, and as a standard, a worklog is carried out over about 6 months (thro
 **Week 24 (07/12–11/12):** [Documentation & Knowledge Transfer](1.24-week24/)
 
 **Week 25 (14/12–31/12):** [Final Presentation & Wrap-up](1.25-week25/)
+
+## Project milestone — 25 October 2026
+
+[AWS Policy Assistant — AI Pilot Acceptance](1.26-policyassistantpilot/)
+
+A dated project checkpoint; this entry does not claim that internship week 26 is complete.

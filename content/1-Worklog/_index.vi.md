@@ -62,3 +62,9 @@ Thông thường và cũng là tiêu chuẩn, một worklog được thực hi�
 **Tuần 24 (07/12–11/12):** [Tài liệu hóa & Chuyển giao kiến thức](1.24-week24/)
 
 **Tuần 25 (14/12–31/12):** [Trình bày cuối khóa & Tổng kết](1.25-week25/)
+
+## Mốc dự án — 25/10/2026
+
+[AWS Policy Assistant — Nghiệm thu AI Pilot](1.26-policyassistantpilot/)
+
+Đây là mốc dự án theo ngày; không xác nhận hoàn thành tuần thực tập 26.
