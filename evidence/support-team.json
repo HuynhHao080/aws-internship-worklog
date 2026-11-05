@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-05T17:01:54.833457+00:00",
+  "scope": "One synthetic consented support ticket and three invitation-suppressed identities (customer/two staff). Real HTTP privacy, assignment, note, revision and cleanup checks; no real customer, model, embedding, PDF/OCR or email operation.",
+  "code_sha256": "5528dd1d91ab278545472fdb861f7e2678df2a3fdce47bdc5745f851f1a1a359",
+  "template_sha256": "95666c09c6a7e849bc36f4730ceea31930bea2bbf07a0d587fc7e8a5b0e3a8fa",
+  "checks": [
+    "Anonymous staff queue rejected",
+    "Customer cannot inspect staff queue",
+    "Customer cannot call private-note action",
+    "First staff claim uses its authenticated identity",
+    "Second staff sees another assignee",
+    "Second staff cannot double claim",
+    "Other assignee cannot send a public reply",
+    "Collaborator can add an internal note",
+    "Customer detail/list export data excludes internal metadata",
+    "Internal action preserves public timestamps, message count and retention",
+    "Opaque revision prevents stale overwrite after an internal note",
+    "Handover requires a meaningful reason",
+    "Explicit handover changes assignee and retains internal reason",
+    "Former assignee cannot release another staff member",
+    "Mine/other queue filters follow authenticated staff",
+    "Assigned staff can reply without exposing notes",
+    "Customer receives public reply only",
+    "Customer follow-up preserves private notes and assignment",
+    "Current assignee can release to unassigned queue",
+    "Audit stores actions rather than note or reason text"
+  ],
+  "cleanup": {
+    "http_passed": true,
+    "accounts_cleaned": true,
+    "support_purged": true
+  },
+  "verified_frontend_files": 40,
+  "verified_lambda_artifacts": 6,
+  "cloudfront_invalidation": "Completed",
+  "source_report_hash_format": "SHA256 of UTF-8 canonical JSON: sorted keys, ensure_ascii=False, separators comma/colon, no trailing newline",
+  "source_reports": {
+    "docs/support-team-live-acceptance.json": "903fb1e8fb37c22d2e8a36eb7ddd0560aeacdfbd07ea56e520d169146baa22bb",
+    "docs/support-team-artifact-verification.json": "200ed65a5e553f8a41330ce16983cb751cc47cd8850306cae756363c02fe43d8"
+  },
+  "limits": [
+    "Synthetic support HTTP acceptance; no model, PDF/OCR, email delivery or real customer processing.",
+    "No new visual browser, load, restore, SLA or student authorship acceptance."
+  ]
+}
