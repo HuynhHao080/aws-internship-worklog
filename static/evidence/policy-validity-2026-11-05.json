@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-05T15:39:09.840807+00:00",
+  "scope": "Real API authorization/read/draft validation; one disposable identity, three never-current synthetic policy rows. No model, publish, PDF/OCR or email calls. Operator seeds are not publication/embedding acceptance.",
+  "code_sha256": "eac3c36873381d674db6fb9ab2161925fce3d417f997e42252eb142bc0bd72bd",
+  "template_sha256": "79e5ee37f28212e3b163a8143a110254976d7804d272ad3e46d9c1ad77635056",
+  "checks": [
+    "Anonymous administrator catalogue is rejected",
+    "Customer cannot inspect administrator validity metadata",
+    "Public lookup hides upcoming source",
+    "Public lookup hides expired source",
+    "Public lookup hides invalid source",
+    "Administrator sees computed upcoming status",
+    "Catalogue filter selects only matching QA upcoming",
+    "Administrator sees computed expired status",
+    "Catalogue filter selects only matching QA expired",
+    "Administrator sees computed invalid status",
+    "Catalogue filter selects only matching QA invalid",
+    "Unknown validity filter is rejected",
+    "Impossible date is rejected before saving",
+    "Stale revision cannot change a window",
+    "Draft date clearing leaves the published future window intact",
+    "Administrator role does not bypass public date checks"
+  ],
+  "cleanup": {
+    "http_passed": true,
+    "accounts_cleaned": true,
+    "policies_cleaned": true
+  },
+  "verified_frontend_files": 37,
+  "verified_lambda_artifacts": 6,
+  "cloudfront_invalidation": "Completed",
+  "source_report_hash_format": "SHA256 of UTF-8 canonical JSON: sorted keys, ensure_ascii=False, separators comma/colon, no trailing newline",
+  "source_reports": {
+    "docs/policy-validity-live-acceptance.json": "f3f1adfc526a7cee9c3c3abd734d7a0c4ee5fea88a9aed4ab35149d46b87b4ca",
+    "docs/policy-validity-artifact-verification.json": "26c06e90bb7248f46771f3e2b22bc6c3a419f3dce393b7d60222d9e098129127"
+  },
+  "limits": [
+    "Operator-seeded inactive policies and draft/read APIs only, not model or publication acceptance.",
+    "No new browser visual, load, restore or AI accuracy result."
+  ]
+}
