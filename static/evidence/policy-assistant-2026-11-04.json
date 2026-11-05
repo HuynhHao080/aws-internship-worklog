@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "acceptance_checked_at": "2026-11-04T10:37:51.178980+00:00",
+  "artifact_checked_at": "2026-11-04T10:48:13.528716+00:00",
+  "primary_url": "https://djreo5eptvwk5.cloudfront.net/",
+  "stack": "policy-assistant",
+  "code_sha256": "974197f606822d42a51a922694a30de95be06ac57a5a4ff30c1837089ab94273",
+  "template_sha256": "81b292927bff436f13e2b08861997f2b312d1b89b37e628029d65aa9158adfed",
+  "live_checks": [
+    "Both deployed quality routes enforce JWT",
+    "Quality API rejects anonymous requests",
+    "Customer cannot view global quality analytics",
+    "Actual save_answer transaction records one answer in isolated cohort",
+    "Another customer cannot rate a known private conversation",
+    "Owned feedback records a helpful vote",
+    "Same-target network retry does not double count",
+    "Stale conflicting feedback is rejected",
+    "Changing a vote moves counters atomically",
+    "Withdrawing a vote restores feedback totals",
+    "Controlled reason validation rejects invalid feedback",
+    "Admin report exposes only anonymous aggregate measurements",
+    "Synthetic year-2000 fixture cannot appear in normal dashboard",
+    "Admin role still cannot rate another customer private answer",
+    "Disposable history partitions are empty after account purge"
+  ],
+  "cleanup": {
+    "http_passed": true,
+    "accounts_cleaned": true,
+    "fixture_cleaned": true,
+    "history_purged": true
+  },
+  "verified_lambda_artifacts": 6,
+  "verified_frontend_files": 31,
+  "scope": "Two disposable identities; synthetic private answer stored through actual save_answer using operator CLI transport, isolated unavailable year-2000 cohort. Real feedback APIs and aggregate-only authorization. No model/PDF/email or real current/previous-month metric writes.",
+  "method": "AWS artifact metadata and content checksums only; no live-browser/session or model access",
+  "source_reports": {
+    "docs/quality-live-acceptance.json": "782fe710320b9fc83f0d2979a25fba55d2fc9159a86768cec608eada3ad6343a",
+    "docs/quality-artifact-verification.json": "7c723325f4e249adbf871ac24cc5a092fe0c763f3825295475f02cb4d6ae878e"
+  },
+  "limits": [
+    "Historical acceptance, not a new live run or CI result.",
+    "No new model, visual browser, load, restore or alert-delivery acceptance.",
+    "No customer IDs, questions, answers, JWTs or operator credentials exported.",
+    "Academic evidence and student authorship remain pending."
+  ]
+}
