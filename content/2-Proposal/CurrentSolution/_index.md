@@ -66,7 +66,7 @@ The owner's target is **USD 30–50/month**. A USD 50 budget with USD 25/40/50 t
 | 1,000 answers × 8,000 input and up to 900 output tokens | Global Claude Haiku 5.5 from Singapore. Estimate a higher scenario at 2,000 attempts/month. |
 | Support, audit, counters and operations | DynamoDB transactions/indexes/PITR, SQS, logs/alarms/dashboard, SNS, CloudFront/transfer and failed requests |
 
-Total: **PENDING**. The full infrastructure estimate still needs Calculator. Record credits or free-tier allowances separately. Use [AWS Pricing Calculator](https://calculator.aws/) and [official Bedrock pricing](https://aws.amazon.com/bedrock/pricing/), retaining date, regions, assumptions and a share URL/export. Supplement unsupported models/dimensions with explicit calculations from official prices. [Detailed cost inputs]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+The 30-day model totals **USD 7.10** at baseline and **USD 11.97** at higher load, before free allowances, credits and tax. The Calculator share link/export is pending. [Inputs and unit rates]({{< relref "/5-Workshop/5.7-PolicyAssistant/Cost" >}}).
 
 ### Verified inference and OCR rates
 

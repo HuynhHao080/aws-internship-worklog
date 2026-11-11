@@ -66,7 +66,7 @@ Mục tiêu chủ dự án **30–50 USD/tháng**; cấu hình budget 50 USD v�
 | 1.000 câu trả lời × 8.000 input và tối đa 900 output token | Global Claude Haiku 5.5 từ Singapore. Kịch bản 2.000 lượt/tháng dùng cho dự toán tải cao. |
 | Hỗ trợ, audit, counters và vận hành | DynamoDB transactional writes/index/PITR, SQS, logs/alarms/dashboard, SNS, CloudFront/transfer và request lỗi |
 
-Tổng tiền: **CHỜ**, chưa có tổng dự toán Calculator; không ghi 0 USD hoặc mặc định free tier/credit. Chủ dự án cần [AWS Pricing Calculator](https://calculator.aws/) và [giá Bedrock chính thức](https://aws.amazon.com/bedrock/pricing/), lưu ngày, region, giả định và share URL/export. Nếu thiếu dimension/model thì bổ sung phép tính từ giá chính thức. [Kịch bản COST chi tiết]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+Dự toán 30 ngày của bản chính là **7.10 USD** ở tải cơ sở và **11.97 USD** ở tải tăng, theo giả định công khai trước miễn phí, credits và thuế. Link/bản xuất Calculator vẫn chờ. [Bảng đầu vào và đơn giá]({{< relref "/5-Workshop/5.7-PolicyAssistant/Cost" >}}).
 
 ### Chi phí suy luận và OCR đã xác minh đơn giá
 

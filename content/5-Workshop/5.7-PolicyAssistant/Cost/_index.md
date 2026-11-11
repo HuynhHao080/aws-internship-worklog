@@ -24,6 +24,44 @@ AI-assisted material requires student review, execution and explanation. DOM che
 ### Historical material below
 <!-- policy-assistant-managed:end -->
 
+## Primary deployment estimate · 12 November 2026
+
+**USD 7.10/month baseline and USD 11.97/month higher load.** This 30-day model uses assumed workloads and public rates before free allowances, credits and tax. Use these inputs for AWS Pricing Calculator and compare with CloudWatch after collecting real usage. Regional services use Singapore rates. CloudFront uses a Europe edge scenario for PriceClass_100. [AWS Price List API](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetProducts.html).
+
+| Item | Unit | Baseline | Higher load | USD/unit | SKU or source |
+|---|---|---:|---:|---:|---|
+| API Gateway HTTP API | request | 20000 | 40000 | .00000125 | HTX6VZU3YCMMNRM5 |
+| Lambda | request | 64700 | 87700 | .0000002 | 36D3E7396ZKUSWWW |
+| Lambda x86 | GB-s | 5945 | 10720 | .0000166667 | 67ZV6RMYY72YSRDC |
+| DynamoDB on-demand | RRU | 250000 | 750000 | .0000001425 | XF4WN9CQUFPSY9SQ |
+| DynamoDB on-demand | WRU | 50000 | 150000 | .00000071 | PZTVP859DVDCGT8X |
+| DynamoDB Standard | GB-month | .10 | .30 | .285 | YCMS8QPJ7DRVHAXD |
+| DynamoDB PITR | GB-month | .10 | .30 | .228 | GSSDTS2TPQ4RHW4R |
+| S3 Standard | GB-month | 2 | 6 | .025 | M6MTARCQFUQBQ2V3 |
+| S3 PUT / COPY / POST / LIST | request | 2000 | 6000 | .000005 | VHRJWKRHEA6VHEFY |
+| S3 GET and other | request | 5000 | 15000 | .0000004 | T469UNPYX78434EG |
+| API / S3 → Internet | GB | 1 | 3 | .12 | SDHP4R7WGBVJPQPY |
+| CloudFront HTTPS (Europe) | request | 10000 | 30000 | .0000012 | YA5QZD7XG45UGHCH |
+| CloudFront egress (Europe) | GB | 1 | 3 | .085 | CloudFront |
+| SQS Standard | request | 300000 | 600000 | .0000004 | PVF7MDBNRK7V9S5H |
+| Cognito Lite | MAU | 50 | 150 | .0055 | CJUNATY8K3J8WJ5U |
+| CloudWatch Logs ingest | GB | 1 | 3 | .70 | ZEKCE7VGMSM5XZPW |
+| CloudWatch Logs retained | GB-month | .5 | 1.5 | .03 | RKCBFFXUWXG8KUQY |
+| CloudWatch standard alarm | alarm-month | 9 | 9 | .10 | ERS2PGV5BX4XH4WQ |
+| CloudWatch dashboard | dashboard-month | 1 | 1 | 3 | CloudWatch |
+| SNS API | request | 100 | 300 | .0000005 | UNWF5P8PEVEH2AZ2 |
+| SNS email | delivery | 100 | 300 | .00002 | SNS |
+| Claude Haiku 5.5 Global input | MTok | 8 | 16 | .10 | 82DP2ZQEH38W5NDX |
+| Claude Haiku 5.5 Global output | MTok | .9 | 1.8 | .50 | 58YZ69WTV49A9DVA |
+| Textract AsyncTextPagesProcessed | page | 200 | 600 | .0015 | VDM7FRY6BHABK2PJ |
+
+- Lambda includes 20,000/40,000 API calls at 512 MiB. Assume 3 seconds for 1,000/2,000 AI calls and 0.25 seconds for the others. Add 43,200 recovery calls at 256 MiB × 0.15 seconds and 1,500/4,500 background calls at 512 MiB × 0.6 seconds. The recovery schedule stays constant. Durations are assumptions.
+- DynamoDB request units account for scans, transactions, indexes and retries. S3 storage includes PDFs, versions, quarantine, extracted text and web assets. Direct API/PDF egress is separate from CloudFront traffic. SQS includes polling and retries.
+- The deployed stack has nine alarms. The estimate includes one dashboard, log volume and SNS email deliveries. Recovery rule target invocations are included under Lambda. The USD 50 budget is an alert threshold. Taxes, paid support and workloads outside these scenarios are excluded.
+- Enter the units above into [AWS Pricing Calculator](https://calculator.aws/). For unavailable model or OCR dimensions, add the two token rows and OCR row separately and check for double counting. The Calculator share link or export is pending.
+
+Public sources for rows without a SKU are [CloudFront](https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/), [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/), [SNS](https://aws.amazon.com/sns/faqs/) and [AWS Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/pricing/).
+
 # Monthly cost planning — verified AWS rates, 2026-10-21
 
 Region: **Asia Pacific (Singapore), ap-southeast-1**. Currency: USD, 30-day month. This is a planning model, not measured consumption or an AWS invoice. Run `python -m scripts.estimate_cost` to reproduce the itemized table in `cost/monthly-table.md` (cost/monthly-table.md; application repository). The complete per-service Calculator input quantities, SKU, rate dimensions, publication dates, source URLs and catalogue SHA-256 are in `cost/aws-rates-2026-10-21.json` (cost/aws-rates-2026-10-21.json; application repository). Result: `cost/estimate-result.json` (cost/estimate-result.json; application repository).

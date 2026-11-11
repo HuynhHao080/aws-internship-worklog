@@ -15,7 +15,7 @@ weight: 1
 
 - Đọc [đề xuất hiện tại]({{< relref "/2-Proposal/CurrentSolution" >}}) để xem bài toán, phạm vi, kiến trúc cần tự vẽ, kế hoạch chốt, đầu vào COST và rủi ro. [Chương bản chính]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}) giữ danh mục và bằng chứng qua từng release.
 - Đã có đăng ký công khai, PDF riêng/text/OCR, hỏi đáp có nguồn, lịch sử, draft/publish/hiệu lực chính sách, thông tin shop, đánh giá tổng hợp và hỗ trợ có consent. [Phối hợp hỗ trợ]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}) bổ sung nhận việc/bàn giao/ghi chú nội bộ; không tự tạo quyền nhân viên hạn chế hoặc quyền đọc PDF khách.
-- Snapshot runtime gần nhất: **322 Python đạt, 11 live bỏ qua; 67 frontend đạt; 20 HTTP checks đạt**, ba tài khoản QA và yêu cầu thử đã dọn. 40 tệp frontend và 6 Lambda khớp artifact. Timestamp UTC 05/11 tương ứng 06/11 Việt Nam; không phải lần chạy mới khi mở trang. Không gọi model/PDF/OCR/email trong đợt HTTP này. [Báo cáo](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/support-team-verification.md), [CI ứng dụng](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/42072920395).
+- Snapshot nghiệm thu hỗ trợ ngày 06/11: **322 Python đạt, 11 live bỏ qua; 67 frontend đạt; 20 HTTP checks đạt**, ba tài khoản QA và yêu cầu thử đã dọn. 40 tệp frontend và 6 Lambda khớp artifact. Timestamp UTC 05/11 tương ứng 06/11 Việt Nam; không phải lần chạy mới khi mở trang. Không gọi model/PDF/OCR/email trong đợt HTTP này. [Báo cáo](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/support-team-verification.md), [CI ứng dụng](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/42072920395).
 - Nội dung shop vẫn **DEMO**; còn chờ chính sách thật được phê duyệt, browser/accuracy/tải/restore/email theo phạm vi. Budget 50 USD chỉ cảnh báo; dự toán 6,63 USD/budget 20 USD bên dưới thuộc môi trường cũ, không dùng làm giá bản hiện tại.
 - Ba blog đã đăng, minh chứng office/sự kiện, sơ đồ tự vẽ, Pricing Calculator và video còn chờ evidence cá nhân. Bản thảo kỹ thuật không phải bài đã đăng. Không sửa ngày thực tập, daily worklog hoặc tạo ảnh/điểm thay sinh viên.
 
@@ -23,6 +23,44 @@ Nội dung có AI hỗ trợ; sinh viên phải tự rà soát, thực hiện v�
 
 ### Tài liệu lịch sử bên dưới
 <!-- policy-assistant-managed:end -->
+
+## Dự toán bản chính · 12/11/2026
+
+**Kịch bản cơ sở 7.10 USD/tháng, kịch bản tăng tải 11.97 USD/tháng.** Đây là mô hình giả định 30 ngày dùng đơn giá công khai trước miễn phí, credits và thuế. Các số dưới đây dùng để nhập AWS Pricing Calculator và đối chiếu với CloudWatch khi có tải thật. Tài nguyên vùng tính theo Singapore, CloudFront dùng một kịch bản edge châu Âu cho PriceClass_100. [AWS Price List API](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetProducts.html).
+
+| Hạng mục | Đơn vị | Cơ sở | Tăng tải | USD/đơn vị | SKU hoặc nguồn |
+|---|---|---:|---:|---:|---|
+| API Gateway HTTP API | request | 20000 | 40000 | .00000125 | HTX6VZU3YCMMNRM5 |
+| Lambda | request | 64700 | 87700 | .0000002 | 36D3E7396ZKUSWWW |
+| Lambda x86 | GB-s | 5945 | 10720 | .0000166667 | 67ZV6RMYY72YSRDC |
+| DynamoDB on-demand | RRU | 250000 | 750000 | .0000001425 | XF4WN9CQUFPSY9SQ |
+| DynamoDB on-demand | WRU | 50000 | 150000 | .00000071 | PZTVP859DVDCGT8X |
+| DynamoDB Standard | GB-month | .10 | .30 | .285 | YCMS8QPJ7DRVHAXD |
+| DynamoDB PITR | GB-month | .10 | .30 | .228 | GSSDTS2TPQ4RHW4R |
+| S3 Standard | GB-month | 2 | 6 | .025 | M6MTARCQFUQBQ2V3 |
+| S3 PUT / COPY / POST / LIST | request | 2000 | 6000 | .000005 | VHRJWKRHEA6VHEFY |
+| S3 GET and other | request | 5000 | 15000 | .0000004 | T469UNPYX78434EG |
+| API / S3 → Internet | GB | 1 | 3 | .12 | SDHP4R7WGBVJPQPY |
+| CloudFront HTTPS (Europe) | request | 10000 | 30000 | .0000012 | YA5QZD7XG45UGHCH |
+| CloudFront egress (Europe) | GB | 1 | 3 | .085 | CloudFront |
+| SQS Standard | request | 300000 | 600000 | .0000004 | PVF7MDBNRK7V9S5H |
+| Cognito Lite | MAU | 50 | 150 | .0055 | CJUNATY8K3J8WJ5U |
+| CloudWatch Logs ingest | GB | 1 | 3 | .70 | ZEKCE7VGMSM5XZPW |
+| CloudWatch Logs retained | GB-month | .5 | 1.5 | .03 | RKCBFFXUWXG8KUQY |
+| CloudWatch standard alarm | alarm-month | 9 | 9 | .10 | ERS2PGV5BX4XH4WQ |
+| CloudWatch dashboard | dashboard-month | 1 | 1 | 3 | CloudWatch |
+| SNS API | request | 100 | 300 | .0000005 | UNWF5P8PEVEH2AZ2 |
+| SNS email | delivery | 100 | 300 | .00002 | SNS |
+| Claude Haiku 5.5 Global input | MTok | 8 | 16 | .10 | 82DP2ZQEH38W5NDX |
+| Claude Haiku 5.5 Global output | MTok | .9 | 1.8 | .50 | 58YZ69WTV49A9DVA |
+| Textract AsyncTextPagesProcessed | page | 200 | 600 | .0015 | VDM7FRY6BHABK2PJ |
+
+- Lambda gồm 20.000/40.000 lượt API ở 512 MiB, với 1.000/2.000 lượt AI giả định 3 giây và các lượt còn lại 0,25 giây. Cộng 43.200 lượt recovery ở 256 MiB × 0,15 giây và 1.500/4.500 lượt nền ở 512 MiB × 0,6 giây. Lịch recovery giữ nguyên trong hai kịch bản. Các thời lượng là giả định.
+- DynamoDB tính RRU/WRU đã quy đổi cho Scan, giao dịch, index và retry. Dung lượng S3 bao gồm PDF, phiên bản, vùng chờ, văn bản trích xuất và tệp web. Egress trực tiếp của API/PDF tách khỏi lưu lượng CloudFront. SQS gồm polling và retry.
+- Bản AWS có chín alarm. Dự toán tính một dashboard, log theo GB và SNS thông báo email. Chi phí Lambda của quy tắc recovery đã tính ở dòng Lambda. Budget 50 USD là ngưỡng cảnh báo. Thuế, hỗ trợ trả phí và tải phát sinh ngoài kịch bản chưa được tính.
+- Khi tạo estimate trong [AWS Pricing Calculator](https://calculator.aws/), dùng đúng đơn vị ở bảng. Nếu không chọn được model/đơn vị OCR, cộng hai dòng token và dòng OCR bên ngoài, kiểm tra tránh tính trùng. Hồ sơ hiện chờ link chia sẻ hoặc bản xuất từ Calculator.
+
+Nguồn công khai cho các dòng không dùng SKU gồm [CloudFront](https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/), [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/), [SNS](https://aws.amazon.com/sns/faqs/) và [AWS Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/pricing/).
 
 # Dự toán và dọn dẹp
 
