@@ -12,11 +12,17 @@ weight: 0
 3. [Mã nguồn và README](https://github.com/HuynhHao080/aws-policy-assistant) có template AWS SAM, kiểm thử và hướng dẫn vận hành.
 4. [Báo cáo nghiệm thu triển khai](https://github.com/HuynhHao080/aws-policy-assistant/blob/6225d5c66ed5f114be1e3cf004df937ab0e58f67/docs/HUONG-DAN-PHOI-HOP-HO-TRO.md) hướng dẫn thao tác. [Bằng chứng API và artifact]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}).
 
+## Bản mã nguồn và bằng chứng dùng khi nộp
+
+- Hồ sơ dùng commit ứng dụng **43d9855**. CloudFormation báo `UPDATE_COMPLETE`, cấu hình model `global.anthropic.claude-haiku-5-5`. Bản giao diện cùng commit đã phát hành qua CloudFront. [Mã nguồn tại commit](https://github.com/HuynhHao080/aws-policy-assistant/tree/43d9855ae879272b28998703191c59423af74379).
+- Bản này đạt **89 kiểm thử giao diện** và CI thành công. Lượt bàn giao backend trước đó đạt **341 kiểm thử Python**, bỏ qua 11 bài live. Giữ riêng kết quả mô phỏng, API live đã ghi ngày và demo do sinh viên thực hiện. [CI ứng dụng](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43079237925) · [Bản bàn giao]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+
 ## Bài thực hành trên máy cá nhân
 
 Clone repo ứng dụng, cài Python 3.12 và Node.js 22. Mở PowerShell tại thư mục repo mới.
 
 ```powershell
+git switch --detach 43d9855ae879272b28998703191c59423af74379
 py -3.12 -m venv .venv
 & ./.venv/Scripts/python.exe -m pip install -r policy_assistant/requirements.txt -r tests/requirements.txt
 Remove-Item Env:AWS_SAM_STACK_NAME, Env:POLICY_ASSISTANT_ID_TOKEN -ErrorAction SilentlyContinue
@@ -40,6 +46,8 @@ Kiểm mã thoát sau mỗi lệnh. Các bài Python dùng dịch vụ giả l�
 Khi quay, che token, URL tải lên có chữ ký và thông tin tài khoản. Nếu không chạy được một bước, ghi nguyên nhân và trình bày bằng chứng đã có với đúng ngày và phạm vi. Sau demo, dọn dữ liệu thử qua giao diện tài khoản hoặc chức năng xóa tương ứng.
 
 ## Những mục cần chốt trước khi nộp
+
+Ưu tiên sơ đồ kiến trúc tự vẽ và phần trình bày workshop. Theo barem, cả hai là điều kiện để được tính điểm workshop. Dùng biểu tượng AWS chính thức và tập giải thích ranh giới quyền, luồng dữ liệu và lý do chọn dịch vụ. [Tiêu chí chấm FCAJ](https://hcm-rules.awsfcaj.com/5-scoring/).
 
 | Mục | Việc của người nộp |
 |---|---|

@@ -66,7 +66,18 @@ The owner's target is **USD 30–50/month**. A USD 50 budget with USD 25/40/50 t
 | 1,000 answers × 8,000 input and up to 900 output tokens | Global Claude Haiku 5.5 from Singapore. Estimate a higher scenario at 2,000 attempts/month. |
 | Support, audit, counters and operations | DynamoDB transactions/indexes/PITR, SQS, logs/alarms/dashboard, SNS, CloudFront/transfer and failed requests |
 
-Total: **PENDING**. No current unit prices or completed estimate have been verified; do not enter zero or assume free tier/credits. Use [AWS Pricing Calculator](https://calculator.aws/) and [official Bedrock pricing](https://aws.amazon.com/bedrock/pricing/), retaining date, regions, assumptions and a share URL/export. Supplement unsupported models/dimensions with explicit calculations from official prices. [Detailed cost inputs]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+Total: **PENDING**. The full infrastructure estimate still needs Calculator. Record credits or free-tier allowances separately. Use [AWS Pricing Calculator](https://calculator.aws/) and [official Bedrock pricing](https://aws.amazon.com/bedrock/pricing/), retaining date, regions, assumptions and a share URL/export. Supplement unsupported models/dimensions with explicit calculations from official prices. [Detailed cost inputs]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+
+### Verified inference and OCR rates
+
+AWS Price List rates checked on 12 November 2026 for Singapore (`ap-southeast-1`), in USD. Claude Haiku 5.5 Standard Global costs **USD 0.10 per million input tokens** (SKU `82DP2ZQEH38W5NDX`) and **USD 0.50 per million output tokens** (SKU `58YZ69WTV49A9DVA`). Textract asynchronous text detection costs **USD 0.0015 per page** at the first tier (SKU `VDM7FRY6BHABK2PJ`). [AWS Price List API](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html) · [Bedrock model card](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html).
+
+| Scenario | Inference | OCR | Combined subtotal |
+|---|---:|---:|---:|
+| 1,000 model calls, 100 PDFs | 8 million input and 0.9 million output tokens = USD 1.25 | 200 pages = USD 0.30 | **USD 1.55/month** |
+| 2,000 model calls, 300 PDFs | 16 million input and 1.8 million output tokens = USD 2.50 | 600 pages = USD 0.90 | **USD 3.40/month** |
+
+Both scenarios assume 8,000 input and 900 output tokens per model call, 10 pages per PDF and 20% OCR coverage. These subtotals cover two line items. Add the infrastructure estimate from AWS Pricing Calculator, check for double-counted Bedrock and Textract charges, and save the share link or export. [Saving an estimate](https://docs.aws.amazon.com/pricing-calculator/latest/userguide/save-share-estimate.html).
 
 ## 6. Remaining delivery plan — not completed activity
 

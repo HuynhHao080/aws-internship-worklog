@@ -66,7 +66,18 @@ Mục tiêu chủ dự án **30–50 USD/tháng**; cấu hình budget 50 USD v�
 | 1.000 câu trả lời × 8.000 input và tối đa 900 output token | Global Claude Haiku 5.5 từ Singapore. Kịch bản 2.000 lượt/tháng dùng cho dự toán tải cao. |
 | Hỗ trợ, audit, counters và vận hành | DynamoDB transactional writes/index/PITR, SQS, logs/alarms/dashboard, SNS, CloudFront/transfer và request lỗi |
 
-Tổng tiền: **CHỜ**, chưa có đơn giá/estimate mới được xác minh; không ghi 0 USD hoặc mặc định free tier/credit. Chủ dự án cần [AWS Pricing Calculator](https://calculator.aws/) và [giá Bedrock chính thức](https://aws.amazon.com/bedrock/pricing/), lưu ngày, region, giả định và share URL/export. Nếu thiếu dimension/model thì bổ sung phép tính từ giá chính thức. [Kịch bản COST chi tiết]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+Tổng tiền: **CHỜ**, chưa có tổng dự toán Calculator; không ghi 0 USD hoặc mặc định free tier/credit. Chủ dự án cần [AWS Pricing Calculator](https://calculator.aws/) và [giá Bedrock chính thức](https://aws.amazon.com/bedrock/pricing/), lưu ngày, region, giả định và share URL/export. Nếu thiếu dimension/model thì bổ sung phép tính từ giá chính thức. [Kịch bản COST chi tiết]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+
+### Chi phí suy luận và OCR đã xác minh đơn giá
+
+Đối chiếu AWS Price List ngày 12/11/2026 cho Singapore (`ap-southeast-1`), USD. Claude Haiku 5.5 Standard Global có giá **0,10 USD/triệu token vào** (SKU `82DP2ZQEH38W5NDX`) và **0,50 USD/triệu token ra** (SKU `58YZ69WTV49A9DVA`). Textract bất đồng bộ nhận dạng văn bản có giá **0,0015 USD/trang** ở bậc đầu (SKU `VDM7FRY6BHABK2PJ`). [AWS Price List API](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html) · [Model card Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html).
+
+| Kịch bản | Suy luận | OCR | Tổng hai hạng mục |
+|---|---:|---:|---:|
+| 1.000 lượt gọi, 100 PDF | 8 triệu token vào và 0,9 triệu token ra = 1,25 USD | 200 trang = 0,30 USD | **1,55 USD/tháng** |
+| 2.000 lượt gọi, 300 PDF | 16 triệu token vào và 1,8 triệu token ra = 2,50 USD | 600 trang = 0,90 USD | **3,40 USD/tháng** |
+
+Hai kịch bản giả định 8.000 token vào, 900 token ra mỗi lượt gọi model, 10 trang/PDF và 20% trang qua OCR. Các số trên là dự toán riêng cho hai hạng mục. Để chốt tổng dự toán AWS, cộng phần hạ tầng đã tính bằng Calculator, kiểm tra tránh tính trùng Bedrock/Textract và lưu link chia sẻ hoặc bản export. [Cách lưu estimate](https://docs.aws.amazon.com/pricing-calculator/latest/userguide/save-share-estimate.html).
 
 ## 6. Kế hoạch chốt — chưa ghi thành đã thực hiện
 

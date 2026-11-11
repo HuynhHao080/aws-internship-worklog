@@ -12,11 +12,17 @@ weight: 0
 3. The [source and README](https://github.com/HuynhHao080/aws-policy-assistant) include the AWS SAM template, tests and operator instructions.
 4. The [staff operator guide](https://github.com/HuynhHao080/aws-policy-assistant/blob/6225d5c66ed5f114be1e3cf004df937ab0e58f67/docs/HUONG-DAN-PHOI-HOP-HO-TRO.md) describes the workflow. [API and artifact evidence]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}).
 
+## Submission revision and evidence
+
+- Use application commit **43d9855** for this submission. CloudFormation reported `UPDATE_COMPLETE` with `global.anthropic.claude-haiku-5-5`, and CloudFront publication completed for the frontend built from this revision. [Pinned source](https://github.com/HuynhHao080/aws-policy-assistant/tree/43d9855ae879272b28998703191c59423af74379).
+- This revision passed **89 frontend tests** and application CI. The preceding backend handover passed **341 Python tests** with 11 live tests skipped. Keep simulated checks, dated live API results and your own recorded demo as separate evidence. [Application CI](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43079237925) · [Handover]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+
 ## Local lab
 
 Clone the application repository, install Python 3.12 and Node.js 22, then open PowerShell in the new repository.
 
 ```powershell
+git switch --detach 43d9855ae879272b28998703191c59423af74379
 py -3.12 -m venv .venv
 & ./.venv/Scripts/python.exe -m pip install -r policy_assistant/requirements.txt -r tests/requirements.txt
 Remove-Item Env:AWS_SAM_STACK_NAME, Env:POLICY_ASSISTANT_ID_TOKEN -ErrorAction SilentlyContinue
@@ -40,6 +46,8 @@ Check each command’s exit code. Python tests use mocked services and frontend 
 Hide tokens, presigned upload URLs and account details in the recording. If a step fails, record the cause and present dated evidence with its original scope. Remove test data through account or item deletion after the demo.
 
 ## Items to complete before submission
+
+Prioritize your own architecture diagram and workshop presentation. The published scoring rules treat both as required for workshop points. Use the official AWS icons and be ready to explain the identity boundaries, data flow and trade-offs. [FCAJ scoring rules](https://hcm-rules.awsfcaj.com/5-scoring/).
 
 | Item | Student action |
 |---|---|
