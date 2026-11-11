@@ -10,11 +10,19 @@ weight: 0
 **Primary application model:** Global Claude Haiku 5.5. The application ranks extracted PDF and policy text by keywords. Dated verification reports record their respective releases. [Model cutover evidence](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/haiku55-migration.md).
 # Policy Assistant — primary release, 4 November 2026
 
+## Handover update · 12 November 2026
+
+- **Policy rollback.** Open the policy in Administration → Policies. Expand **Previous publication** and restore it as a draft for review. The current publication stays available until a separate publish action. The app keeps one prior, distinct publication per policy from the time of this release.
+- **Customer support.** Customers can filter loaded requests by staff reply and open status. Staff can filter loaded requests by waiting time, oldest first. A public staff reply clears the waiting indicator on active requests. The queue excludes resolved and closed requests.
+- **Assistant.** Customers can ask a follow-up from their own history, compare excerpts, download an answer as TXT and prepare a support draft for review.
+
+The application release passed 341 local Python tests and 86 frontend tests. Eleven live tests were skipped in this run. The handover still requires approved shop content and owner-run checks for the real model, recovery email and operational alerts. [Source and handover checklist](https://github.com/HuynhHao080/aws-policy-assistant/blob/0c96b04204261ae160dd1da8b1d8818a266897fb/docs/FEATURE-STATUS.md) · [Application CI](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43078191728).
+
 **[Submission pack]({{< relref "/5-Workshop/5.7-PolicyAssistant/Submission" >}})**
 
 **Proposal updated 6 November:** [Problem, scope, architecture, COST, plan and risks]({{< relref "/2-Proposal/CurrentSolution" >}}). COST contains assumed inputs; the total awaits Calculator and the student must design the architecture diagram.
 
-**Latest — support collaboration:** [Assignment, handover and internal notes]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}) is deployed: **322 Python / 67 frontend / 20 HTTP checks passed**, three QA accounts and the test ticket cleaned; 40 frontend files and six Lambda hashes matched. No model, PDF/OCR or email calls. Sections below preserve evidence from earlier releases.
+**Earlier release — support collaboration:** [Assignment, handover and internal notes]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}) is deployed: **322 Python / 67 frontend / 20 HTTP checks passed**, three QA accounts and the test ticket cleaned; 40 frontend files and six Lambda hashes matched. No model, PDF/OCR or email calls. Sections below preserve evidence from earlier releases.
 
 **New5November extension:** [Time-bounded policies and AI source checks]({{< relref "/5-Workshop/5.7-PolicyAssistant/PolicyValidity" >}}) is deployed:298Python/59frontend passes,16API checks and successful cleanup. The reproducible demo covers UTC+07dates, draft isolation, pagination and changes before final source checking. No new AWS service or live model call was required. The31file/251test figures below remain earlier snapshots.
 

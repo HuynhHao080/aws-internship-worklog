@@ -10,11 +10,19 @@ weight: 0
 **Model của bản chính:** Global Claude Haiku 5.5. Ứng dụng xếp hạng từ khóa trên văn bản PDF và chính sách. Các báo cáo kiểm thử có ngày bên dưới ghi lại từng bản đã nghiệm thu. [Bằng chứng chuyển model](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/haiku55-migration.md).
 # Policy Assistant — bản chính ngày 04/11/2026
 
+## Cập nhật bàn giao · 12/11/2026
+
+- **Khôi phục chính sách.** Mở chính sách tại Quản trị → Chính sách, mở **Bản công bố trước** và khôi phục thành bản nháp để rà soát. Nội dung hiện tại tiếp tục phục vụ khách cho đến lần công bố tiếp theo. Từ bản này, ứng dụng giữ một bản công bố khác nội dung gần nhất cho mỗi chính sách.
+- **Hỗ trợ khách hàng.** Khách lọc các yêu cầu đã tải theo phản hồi nhân viên hoặc trạng thái đang mở. Nhân viên có thể đưa yêu cầu chờ lâu nhất lên đầu trong các trang đã tải. Phản hồi công khai xử lý trạng thái chờ của tin nhắn khách.
+- **Hỏi đáp.** Khách có thể hỏi tiếp từ lịch sử riêng, đối chiếu đoạn trích, tải câu trả lời dạng TXT và xem lại bản nháp yêu cầu hỗ trợ trước khi gửi.
+
+Bản ứng dụng đạt 341 kiểm thử Python cục bộ và 86 kiểm thử giao diện. Có 11 kiểm thử trực tiếp được bỏ qua trong lượt này. Trước khi nhận khách thật, chủ dự án cần duyệt nội dung shop và tự kiểm tra mô hình thật, email khôi phục và cảnh báo vận hành. [Mã nguồn và danh mục bàn giao](https://github.com/HuynhHao080/aws-policy-assistant/blob/0c96b04204261ae160dd1da8b1d8818a266897fb/docs/FEATURE-STATUS.md) · [CI ứng dụng](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43078191728).
+
 **[Bộ hồ sơ nộp]({{< relref "/5-Workshop/5.7-PolicyAssistant/Submission" >}})**
 
 **Đề xuất cập nhật 06/11:** [Bài toán, phạm vi, kiến trúc, COST, kế hoạch và rủi ro]({{< relref "/2-Proposal/CurrentSolution" >}}). Phần COST có đầu vào giả định, tổng tiền vẫn chờ Calculator; sơ đồ cần sinh viên tự thiết kế.
 
-**Mới nhất — phối hợp hỗ trợ:** [Nhận việc, bàn giao và ghi chú nội bộ]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}) đã lên bản chính: **322 Python / 67 frontend / 20 kiểm tra HTTP đạt**, 3 tài khoản QA và yêu cầu thử đã dọn; 40 tệp frontend và 6 Lambda khớp artifact. Không gọi model, PDF/OCR hay email. Các đoạn bên dưới giữ bằng chứng của các bản trước.
+**Bản trước — phối hợp hỗ trợ:** [Nhận việc, bàn giao và ghi chú nội bộ]({{< relref "/5-Workshop/5.7-PolicyAssistant/SupportTeam" >}}) đã lên bản chính: **322 Python / 67 frontend / 20 kiểm tra HTTP đạt**, 3 tài khoản QA và yêu cầu thử đã dọn; 40 tệp frontend và 6 Lambda khớp artifact. Không gọi model, PDF/OCR hay email. Các đoạn bên dưới giữ bằng chứng của các bản trước.
 
 **Mở rộng mới ngày05/11:** [Chính sách có thời hạn và kiểm soát nguồn AI]({{< relref "/5-Workshop/5.7-PolicyAssistant/PolicyValidity" >}}) đã triển khai:298Python/59frontend đạt,16API checks và cleanup đạt. Phần mới có demo tái lập về ngàyUTC+7, draft isolation, pagination và thay nguồn trước lưu; không thêm dịch vụ AWS hay gọi model trong lượt nghiệm thu live. Các số liệu31files/251tests dưới đây là snapshot trước mở rộng này.
 
