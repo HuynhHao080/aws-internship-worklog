@@ -60,7 +60,7 @@ pre: " <b> 4.2. </b> "
 
 - **Áp dụng Bedrock Agent Core Memory** Triển khai cơ chế lưu trữ lịch sử chat của dự án hiện tại với cấu hình retention (ví dụ: lưu 7 ngày), phân mảnh dữ liệu khách hàng theo Namespace nhằm tối ưu hóa chi phí token và tăng độ chính xác khi tìm kiếm.
 - **Tích hợp AWS CloudWatch / Observability**: Thiết lập các chỉ số giám sát độ trễ (latency), chi phí token tiêu thụ của từng model để kịp thời điều chỉnh system prompt.
-- **Thử nghiệm mô hình Nova Micro**: Cấu hình chuyển đổi các tác vụ đơn giản từ Claude sang dòng model thế hệ mới Amazon Nova Micro của AWS để tăng tốc độ phản hồi và tiết kiệm ngân sách chạy thử nghiệm.
+- **Thử cấu hình mô hình** cho tác vụ đơn giản để tìm hiểu độ trễ và chi phí.
 - **Thiết lập sandbox an toàn**: Thử nghiệm tích hợp Code Interpreter giả lập để cho phép Agent tự động thực hiện các phép toán phức tạp hoặc phân tích dữ liệu một cách biệt lập.
 
 ### Trải nghiệm trong event
@@ -78,7 +78,7 @@ Tham gia workshop **“ AWS FCAJ Agent Forge - Deepdive Day 2”** là một tr�
 #### Ứng dụng công cụ hiện đại
 - Trực tiếp làm quen với trình soạn thảo code hỗ trợ AI là **Kiro IDE**, tìm hiểu cơ chế steering document để định hướng ngữ cảnh dự án một cách nhanh chóng và chính xác.
 - Thực hành sử dụng UV để quản lý và cài đặt các gói phụ thuộc (dependencies) trong môi trường biệt lập, cùng với **Agent Core CLI và CDK** để tự động hóa quy trình đóng gói và triển khai tài nguyên lên AWS thông qua CloudFormation.
-- Học cách cấu hình và chuyển đổi mô hình mặc định sang dòng mô hình thế hệ mới **Amazon Nova Micro**. Việc này giúp tăng đáng kể tốc độ phản hồi và tiết kiệm tối đa chi phí khi chạy thử nghiệm.
+- Tìm hiểu cách cấu hình mô hình mặc định cho kịch bản thử nghiệm.
 
 #### Kết nối và trao đổi
 - Cơ hội kết nối và học hỏi trực tiếp trong cộng đồng **First Cloud and AI (FCAJ)**, được chia sẻ các kịch bản triển khai thực tế từ các Solution Architects giàu kinh nghiệm của AWS tại Việt Nam.

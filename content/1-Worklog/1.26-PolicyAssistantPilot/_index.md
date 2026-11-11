@@ -12,7 +12,7 @@ Complete a bounded policy-answer pilot on AWS TEST. This is a dated project mile
 
 CloudFront serves a private S3 frontend. Cognito provides the session; API Gateway validates JWTs before Lambda. DynamoDB stores policies, owner-isolated document metadata and the AI quota/idempotency ledger. Presigned S3 uploads, SQS, a worker, DLQ and scheduled recovery support PDF byte/header/size/hash verification. This is not OCR, malware scanning or extracting uploaded policy text for AI.
 
-AI follows Cognito → API Gateway → dedicated AI Lambda → Bedrock Nova Lite Converse → server validation → displayed answer/citation. The model is `apac.amazon.nova-lite-v1:0`, using the APAC profile from Singapore. Approved sample data may be processed in Singapore, Sydney, Tokyo, Seoul, Osaka or Mumbai. Credentials, user identifiers and private PDFs are not sent to the model.
+The earlier pilot is recorded at the linked commit. The primary application uses Global Claude Haiku 5.5. [Bản lưu](https://github.com/HuynhHao080/aws-internship-worklog/blob/6cd3ee9b2691561a76305f734d5f71886c828936/content/1-Worklog/1.26-PolicyAssistantPilot/_index.md).
 
 Lookup/search, owned upload/status/download and the document library are implemented. Owner observations confirmed the refund-policy lookup, one refund-keyword match, three documents and preserved library statuses on refresh. Final AI acceptance did not repeat document uploads. The AI panel has one fixed question, no free-text input and no automatic inference on page load.
 

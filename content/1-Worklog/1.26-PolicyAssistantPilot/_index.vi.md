@@ -14,7 +14,7 @@ Hoàn thiện pilot hỏi đáp chính sách có citation trên AWS TEST. Đây 
 
 CloudFront phân phối frontend từ S3 private. Cognito quản lý session; API Gateway xác minh JWT trước khi gọi Lambda. DynamoDB lưu policy, metadata tài liệu theo owner và AI quota/idempotency ledger. Upload PDF dùng presigned S3, SQS, worker, DLQ và recovery schedule; kiểm tra PDF chỉ là bytes/header/size/hash, không OCR, malware scanning hoặc trích xuất policy cho AI.
 
-Luồng AI: Cognito → API Gateway → AI Lambda riêng → Bedrock Nova Lite Converse → server validation → answer/citation trên UI. Model `apac.amazon.nova-lite-v1:0` dùng APAC profile từ Singapore; dữ liệu mẫu có thể xử lý ở Singapore, Sydney, Tokyo, Seoul, Osaka hoặc Mumbai theo scope đã duyệt. Không đưa JWT, định danh người dùng, credentials hoặc PDF cá nhân vào model.
+Thử nghiệm trước đây được ghi lại tại commit đính kèm. Bản chính hiện dùng Global Claude Haiku 5.5. [Bản lưu](https://github.com/HuynhHao080/aws-internship-worklog/blob/6cd3ee9b2691561a76305f734d5f71886c828936/content/1-Worklog/1.26-PolicyAssistantPilot/_index.vi.md).
 
 Policy lookup, keyword search, upload/status/download và documents library đã được triển khai. Owner xác nhận lookup POL-001, một kết quả refund, ba tài liệu và refresh giữ trạng thái. Upload không được chạy lại trong đợt AI acceptance cuối. Native AI UI chỉ có một câu hỏi cố định, không ô nhập tự do và không tự gọi model khi mở trang.
 

@@ -56,7 +56,7 @@ pre: " <b> 4.2. </b> "
 
 - **Applying Bedrock Agent Core Memory**: Implementing a chat-history storage mechanism for the current project with retention configuration (e.g., keeping data for 7 days), partitioning customer data by Namespace to optimize token cost and improve search accuracy.
 - **Integrating AWS CloudWatch / Observability**: Setting up monitoring metrics for latency and token consumption cost of each model to promptly adjust the system prompt.
-- **Experimenting with the Nova Micro model**: Configuring simple tasks to switch from Claude to AWS's new-generation Amazon Nova Micro model line to increase response speed and save on testing budget.
+- **Tested model configuration** for simple tasks to explore latency and cost.
 - **Setting up a secure sandbox**: Experimenting with integrating a simulated Code Interpreter to let the Agent automatically perform complex calculations or data analysis in isolation.
 
 ### Event Experience
@@ -78,7 +78,7 @@ Attending the **"AWS FCAJ Agent Forge - Deep Dive Day 2"** workshop was a very r
 
 - Got hands-on with the AI-assisted code editor **Kiro IDE**, learning about the steering-document mechanism to quickly and accurately guide project context.
 - Practiced using UV to manage and install dependencies in an isolated environment, along with **Agent Core CLI and CDK** to automate the packaging process and deploy resources to AWS via CloudFormation.
-- Learned how to configure and switch the default model to the new-generation **Amazon Nova Micro** model line. This significantly increases response speed and maximizes cost savings during testing.
+- Learned to configure the default model for a test scenario.
 
 #### Networking and Exchange
 
