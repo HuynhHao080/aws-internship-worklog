@@ -4,6 +4,8 @@ date: 2026-10-21
 weight: 7
 ---
 
+{{< project-navigation >}}
+
 <!-- policy-assistant-managed:begin -->
 ## Primary application — documentation update, 6 November 2026
 

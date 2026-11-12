@@ -4,6 +4,8 @@ date: 2026-11-04
 weight: 0
 ---
 
+{{< project-navigation >}}
+
 
 **PDF text reader.** Open extracted text from the library or jump directly from a citation. Find terms without accents, highlight matches, jump to a page and download TXT. Nine live API checks passed with a synthetic two-page PDF, and the test account was removed. [Verification](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/pdf-text-verification.md).
 

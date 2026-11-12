@@ -4,6 +4,8 @@ date: 2026-11-04
 weight: 0
 ---
 
+{{< project-navigation >}}
+
 
 **Xem văn bản PDF.** Trong thư viện chọn **Xem văn bản**, hoặc mở trích dẫn để tới đúng trang. Có thể tìm không dấu, tô kết quả, nhảy trang và tải TXT. API thật đã qua chín ca với PDF hai trang giả lập và tài khoản thử đã dọn. [Bằng chứng](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/pdf-text-verification.md).
 

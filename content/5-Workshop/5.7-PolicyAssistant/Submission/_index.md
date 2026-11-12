@@ -3,6 +3,8 @@ title: "Policy Assistant submission pack"
 weight: 0
 ---
 
+{{< project-navigation >}}
+
 
 **Primary application model:** Global Claude Haiku 5.5. The application ranks extracted PDF and policy text by keywords. Dated verification reports record their respective releases. [Model cutover evidence](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/haiku55-migration.md).
 ## Four links for the presentation

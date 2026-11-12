@@ -3,6 +3,8 @@ title: "Bộ hồ sơ nộp Policy Assistant"
 weight: 0
 ---
 
+{{< project-navigation >}}
+
 
 **Model của bản chính:** Global Claude Haiku 5.5. Ứng dụng xếp hạng từ khóa trên văn bản PDF và chính sách. Các báo cáo kiểm thử có ngày bên dưới ghi lại từng bản đã nghiệm thu. [Bằng chứng chuyển model](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/haiku55-migration.md).
 ## Bốn đường dẫn cần mở khi trình bày

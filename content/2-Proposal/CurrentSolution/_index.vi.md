@@ -3,9 +3,10 @@ title: "Đề xuất hiện tại — trợ lý chính sách cho shop phụ ki�
 weight: 0
 ---
 
+{{< project-navigation >}}
+
 
 **Model của bản chính:** Global Claude Haiku 5.5. Ứng dụng xếp hạng từ khóa trên văn bản PDF và chính sách. Các báo cáo kiểm thử có ngày bên dưới ghi lại từng bản đã nghiệm thu. [Bằng chứng chuyển model](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/haiku55-migration.md).
-# Policy Assistant — đề xuất giải pháp hiện tại
 
 Rà soát tài liệu: **06/11/2026**. Đây là bản mô tả khớp mã đã công bố và bằng chứng triển khai gần nhất, có AI hỗ trợ; sinh viên phải tự rà soát, thực hành và giải thích. Không phải tuyên bố đã đủ mọi điều kiện FCAJ hoặc được phép dùng chính sách DEMO cho giao dịch thật. Các proposal tháng 10 trong trang cha được giữ làm lịch sử.
 

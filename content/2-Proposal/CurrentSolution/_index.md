@@ -3,9 +3,10 @@ title: "Current proposal — a policy assistant for an accessories shop"
 weight: 0
 ---
 
+{{< project-navigation >}}
+
 
 **Primary application model:** Global Claude Haiku 5.5. The application ranks extracted PDF and policy text by keywords. Dated verification reports record their respective releases. [Model cutover evidence](https://github.com/HuynhHao080/aws-policy-assistant/blob/main/docs/haiku55-migration.md).
-# Policy Assistant — current solution proposal
 
 Document review: **6 November 2026**. This AI-assisted proposal describes published code and the latest recorded deployment evidence. The student must review, practise and explain it. It does not establish FCAJ eligibility or authorize DEMO policies for real transactions. October proposals on the parent page remain historical records.
 

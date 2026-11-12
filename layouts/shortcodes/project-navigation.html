@@ -1,0 +1,15 @@
+{{- $vi := eq .Page.Language.Lang "vi" -}}
+{{- $items := slice
+  (dict "path" "/2-Proposal/CurrentSolution" "vi" "Đề xuất" "en" "Proposal")
+  (dict "path" "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" "vi" "Bản bàn giao" "en" "Handover")
+  (dict "path" "/5-Workshop/5.7-PolicyAssistant/Cost" "vi" "Chi phí AWS" "en" "AWS costs")
+  (dict "path" "/5-Workshop/5.7-PolicyAssistant/Submission" "vi" "Hồ sơ nộp" "en" "Submission")
+-}}
+<nav class="project-navigation" aria-label="{{ if $vi }}Tài liệu Policy Assistant{{ else }}Policy Assistant documents{{ end }}">
+  {{- range $items }}
+    {{- $item := . }}
+    {{- with $.Page.Site.GetPage $item.path }}
+      <a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $.Page.RelPermalink }} aria-current="page"{{ end }}>{{ if $vi }}{{ $item.vi }}{{ else }}{{ $item.en }}{{ end }}</a>
+    {{- end }}
+  {{- end }}
+</nav>

@@ -6,6 +6,8 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
+{{< project-navigation >}}
+
 <!-- policy-assistant-managed:begin -->
 ## Primary application — documentation update, 6 November 2026
 

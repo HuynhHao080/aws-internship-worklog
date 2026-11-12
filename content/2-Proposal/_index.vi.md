@@ -6,6 +6,8 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
+{{< project-navigation >}}
+
 <!-- policy-assistant-managed:begin -->
 ## Bản chính — cập nhật tài liệu 06/11/2026
 

@@ -4,6 +4,8 @@ date: 2026-10-21
 weight: 7
 ---
 
+{{< project-navigation >}}
+
 <!-- policy-assistant-managed:begin -->
 ## Bản chính — cập nhật tài liệu 06/11/2026
 
