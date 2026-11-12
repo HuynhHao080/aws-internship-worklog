@@ -66,7 +66,7 @@ The owner's target is **USD 30–50/month**. A USD 50 budget with USD 25/40/50 t
 | 1,000 answers × 8,000 input and up to 900 output tokens | Global Claude Haiku 5.5 from Singapore. Estimate a higher scenario at 2,000 attempts/month. |
 | Support, audit, counters and operations | DynamoDB transactions/indexes/PITR, SQS, logs/alarms/dashboard, SNS, CloudFront/transfer and failed requests |
 
-The 30-day model totals **USD 7.10** at baseline and **USD 11.97** at higher load, before free allowances, credits and tax. The Calculator share link/export is pending. [Inputs and unit rates]({{< relref "/5-Workshop/5.7-PolicyAssistant/Cost" >}}).
+The 30-day model totals **USD 7.10** at baseline and **USD 11.97** at higher load, before free allowances, credits and tax. [Calculator cross-check](https://calculator.aws/#/estimate?id=edb8950a7263f4b391e23fb3565f807c70be5781) covers inference and OCR. A full Calculator export for all infrastructure line items is pending. [Inputs and unit rates]({{< relref "/5-Workshop/5.7-PolicyAssistant/Cost" >}}).
 
 ### Verified inference and OCR rates
 

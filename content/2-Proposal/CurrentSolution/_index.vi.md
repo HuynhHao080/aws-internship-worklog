@@ -66,7 +66,7 @@ Mục tiêu chủ dự án **30–50 USD/tháng**; cấu hình budget 50 USD v�
 | 1.000 câu trả lời × 8.000 input và tối đa 900 output token | Global Claude Haiku 5.5 từ Singapore. Kịch bản 2.000 lượt/tháng dùng cho dự toán tải cao. |
 | Hỗ trợ, audit, counters và vận hành | DynamoDB transactional writes/index/PITR, SQS, logs/alarms/dashboard, SNS, CloudFront/transfer và request lỗi |
 
-Dự toán 30 ngày của bản chính là **7.10 USD** ở tải cơ sở và **11.97 USD** ở tải tăng, theo giả định công khai trước miễn phí, credits và thuế. Link/bản xuất Calculator vẫn chờ. [Bảng đầu vào và đơn giá]({{< relref "/5-Workshop/5.7-PolicyAssistant/Cost" >}}).
+Dự toán 30 ngày của bản chính là **7.10 USD** ở tải cơ sở và **11.97 USD** ở tải tăng, theo giả định công khai trước miễn phí, credits và thuế. [Link đối chiếu Calculator](https://calculator.aws/#/estimate?id=edb8950a7263f4b391e23fb3565f807c70be5781) bao gồm suy luận và OCR. Bản xuất Calculator cho toàn bộ hạ tầng vẫn chờ. [Bảng đầu vào và đơn giá]({{< relref "/5-Workshop/5.7-PolicyAssistant/Cost" >}}).
 
 ### Chi phí suy luận và OCR đã xác minh đơn giá
 
