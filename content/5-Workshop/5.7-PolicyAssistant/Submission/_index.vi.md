@@ -14,15 +14,15 @@ weight: 0
 
 ## Bản mã nguồn và bằng chứng dùng khi nộp
 
-- Hồ sơ dùng commit ứng dụng **43d9855**. CloudFormation báo `UPDATE_COMPLETE`, cấu hình model `global.anthropic.claude-haiku-5-5`. Bản giao diện cùng commit đã phát hành qua CloudFront. [Mã nguồn tại commit](https://github.com/HuynhHao080/aws-policy-assistant/tree/43d9855ae879272b28998703191c59423af74379).
-- Bản này đạt **89 kiểm thử giao diện** và CI thành công. Lượt bàn giao backend trước đó đạt **341 kiểm thử Python**, bỏ qua 11 bài live. Giữ riêng kết quả mô phỏng, API live đã ghi ngày và demo do sinh viên thực hiện. [CI ứng dụng](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43079237925) · [Bản bàn giao]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+- Hồ sơ dùng commit ứng dụng **c25e278**. CloudFormation báo `UPDATE_COMPLETE`, cấu hình model `global.anthropic.claude-haiku-5-5`. Bản giao diện cùng commit đã phát hành qua CloudFront. [Mã nguồn tại commit](https://github.com/HuynhHao080/aws-policy-assistant/tree/c25e27829b15251206b54982bfcd7b7274a1a88e).
+- Bản này đạt **93 kiểm thử giao diện**, gồm quay lại đúng mục và phục hồi khi phiên đăng nhập hết hạn. Ba trang Cognito đăng nhập, đăng ký và quên mật khẩu đã tải nhận diện mới. Kiểm tra HTTP chỉ xác nhận hiển thị form. Giữ riêng kết quả mô phỏng, API live đã ghi ngày và demo do sinh viên thực hiện. [CI ứng dụng](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43180702320) · [Bản bàn giao]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
 
 ## Bài thực hành trên máy cá nhân
 
 Clone repo ứng dụng, cài Python 3.12 và Node.js 22. Mở PowerShell tại thư mục repo mới.
 
 ```powershell
-git switch --detach 43d9855ae879272b28998703191c59423af74379
+git switch --detach c25e27829b15251206b54982bfcd7b7274a1a88e
 py -3.12 -m venv .venv
 & ./.venv/Scripts/python.exe -m pip install -r policy_assistant/requirements.txt -r tests/requirements.txt
 Remove-Item Env:AWS_SAM_STACK_NAME, Env:POLICY_ASSISTANT_ID_TOKEN -ErrorAction SilentlyContinue
@@ -39,7 +39,7 @@ Kiểm mã thoát sau mỗi lệnh. Các bài Python dùng dịch vụ giả l�
 | Thời gian | Thao tác và điểm cần giải thích |
 |---|---|
 | 0:00–0:40 | Mở app, nêu bài toán và phạm vi shop DEMO. Giải thích sơ đồ tự vẽ từ trình duyệt qua CloudFront, Cognito và API. |
-| 0:40–1:40 | Dùng tài khoản thử, hỏi về bảo hành củ sạc, mở nguồn. Hỏi phí gửi bảo hành để minh họa khi chính sách thiếu quy định. Đọc và đối chiếu câu trả lời thực tế. |
+| 0:40–1:40 | Mở chính sách bảo hành và chọn **Hỏi từ chính sách này**. Hỏi thời hạn bảo hành củ sạc và ai chịu phí gửi. Đối chiếu từng ý với đoạn trích và ghi lại cách agent xử lý dữ kiện còn thiếu. |
 | 1:40–2:50 | Gửi yêu cầu hỗ trợ với dữ liệu giả. Quản trị nhận việc và thêm ghi chú. Quay về tài khoản khách để đối chiếu phần hội thoại thấy được. |
 | 2:50–4:00 | Nêu cách kiểm quyền sở hữu PDF, revision khi hai người xử lý, hàng đợi và dọn dữ liệu. Mở báo cáo, chỉ rõ số liệu nào do bạn chạy. |
 

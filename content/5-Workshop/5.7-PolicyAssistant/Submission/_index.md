@@ -14,15 +14,15 @@ weight: 0
 
 ## Submission revision and evidence
 
-- Use application commit **43d9855** for this submission. CloudFormation reported `UPDATE_COMPLETE` with `global.anthropic.claude-haiku-5-5`, and CloudFront publication completed for the frontend built from this revision. [Pinned source](https://github.com/HuynhHao080/aws-policy-assistant/tree/43d9855ae879272b28998703191c59423af74379).
-- This revision passed **89 frontend tests** and application CI. The preceding backend handover passed **341 Python tests** with 11 live tests skipped. Keep simulated checks, dated live API results and your own recorded demo as separate evidence. [Application CI](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43079237925) · [Handover]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
+- Use application commit **c25e278** for this submission. CloudFormation reported `UPDATE_COMPLETE` with `global.anthropic.claude-haiku-5-5`, and CloudFront publication completed for the frontend built from this revision. [Pinned source](https://github.com/HuynhHao080/aws-policy-assistant/tree/c25e27829b15251206b54982bfcd7b7274a1a88e).
+- This revision passed **93 frontend tests**, including sign-in return and expired callback recovery. The live Cognito sign-in, sign-up and recovery pages served the new branding. The HTTP check covers form display. Keep simulated checks, dated live API results and your own recorded demo as separate evidence. [Application CI](https://github.com/HuynhHao080/aws-policy-assistant/actions/runs/43180702320) · [Handover]({{< relref "/5-Workshop/5.7-PolicyAssistant/CurrentRelease" >}}).
 
 ## Local lab
 
 Clone the application repository, install Python 3.12 and Node.js 22, then open PowerShell in the new repository.
 
 ```powershell
-git switch --detach 43d9855ae879272b28998703191c59423af74379
+git switch --detach c25e27829b15251206b54982bfcd7b7274a1a88e
 py -3.12 -m venv .venv
 & ./.venv/Scripts/python.exe -m pip install -r policy_assistant/requirements.txt -r tests/requirements.txt
 Remove-Item Env:AWS_SAM_STACK_NAME, Env:POLICY_ASSISTANT_ID_TOKEN -ErrorAction SilentlyContinue
@@ -39,7 +39,7 @@ Check each command’s exit code. Python tests use mocked services and frontend 
 | Time | Action and explanation |
 |---|---|
 | 0:00–0:40 | Open the app and explain the DEMO shop scope. Walk through your diagram from browser to CloudFront, Cognito and API. |
-| 0:40–1:40 | Use a test account, ask about charger warranty and inspect the cited source. Ask about warranty shipping fees to show a gap in policy coverage. Read and check the actual response. |
+| 0:40–1:40 | Open the warranty policy and choose **Ask from this policy**. Ask for the charger warranty period and who pays warranty shipping. Compare each part with its excerpt and record how the assistant handles missing information. |
 | 1:40–2:50 | Submit a synthetic support request. As administrator, claim it and add a note. Return to the customer account and compare the visible conversation. |
 | 2:50–4:00 | Explain PDF ownership, concurrent revisions, queues and cleanup. Open the evidence and identify the checks you performed. |
 
